@@ -3,6 +3,8 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,html}",
+    "components/navbar.html",
+    "components/footer.html",
   ],
   theme: {
     colors: {
