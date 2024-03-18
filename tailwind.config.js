@@ -5,6 +5,7 @@ export default {
     "./src/**/*.{js,html}",
     "components/navbar.html",
     "components/footer.html",
+    "components/infographic.html",
   ],
   theme: {
     colors: {

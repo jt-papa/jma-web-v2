@@ -105,12 +105,12 @@
                 <h1 class='text-white'>
                     TOP BRANDS
                 </h1>
-                <div class="relative flex overflow-x-hidden overflow-y-hidden h-40">
+                <div class="relative flex overflow-x-hidden overflow-y-hidden h-40 text-white">
                     <div class="animate-marquee whitespace-nowrap">
-                      <span class="text-4xl mx-4">Custom Merch</span>
+                      <span class="text-4xl mx-4">LOGO</span>
                     </div>
                     <div class="animate-marquee whitespace-nowrap">
-                        <span class="text-4xl mx-4">Custom Merch</span>
+                        <span class="text-4xl mx-4">LOGO</span>
                       </div>
                    </div>
             </div>
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/whatWeDo.html')
+    fetch('/components/infographic.html')
         .then(response => response.text())
         .then(html => document.getElementById('infographic').innerHTML = html);
 });
