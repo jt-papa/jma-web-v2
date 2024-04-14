@@ -6,6 +6,11 @@ export default {
     "components/navbar.html",
     "components/footer.html",
     "components/infographic.html",
+    "pages/WhoWeAre.html",
+    "pages/WhatWeDo.html",
+    "pages/Contact.html",
+    "pages/OurProcess.html",
+    "pages/OurWork.html",
   ],
   theme: {
     colors: {
@@ -14,6 +19,7 @@ export default {
       tang: '#739bc7',
       blue: '#739bc7',
       white: 'white',
+      gl: '#d5d6d8',
     },
     extend: {
       fontFamily: {
@@ -23,6 +29,7 @@ export default {
       animation: {
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
+        fadeIn: 'fadeIn 2s forwards',
       },
       keyframes: {
         marquee: {
@@ -33,9 +40,12 @@ export default {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
-    },
   },
   plugins: [],
 }
-
+}

@@ -12,17 +12,27 @@
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>>
-    <main class= "pt-35">
+    <!--Landing Screen-->
+    <div id="landing-page" class="fixed inset-0 flex flex-col items-center justify-center bg-dark z-50">
+        <img src="assets/jma_logo.png" alt="Company Logo" id="company-logo" class="max-w-1/8 h-60 opacity-0" style="animation: fadeIn 3s forwards;">
+        <button id="enter-site" class="mt-20 px-4 py-2 font-inter font-semibold text-2xl cursor-pointer text-dark bg-gl rounded-full">ENTER SITE</button>
+    </div>
+    <main>
         <!-- Hero section -->
-      <div class="flex pt-64 w-full">
+      <div class="flex pt-32 px-28 w-full">
           <div class='flex justify-right items-right w-1/2 h-[550px] overflow-hidden'>  
             <h1 class='header-typed' id="typed-text"><span id='cursor'></span></h1>
           </div>
       </div>
-    
+
+      <!-- Static Button -->
+      <div class="pr-56">
+        <div id="projectButton" class="fixed z-49 flex justify-center right-32 bottom-20 items-center h-14 w-48 p-2 text-2xl font-inter font-semibold text-dark bg-gl rounded-full focus:outline-none transition transform ease-in-out duration-300 pulse-button"></div>
+      </div>
+
       <!-- Marquee -->
-      <div class="bg-blue font-graphik relative flex overflow-x-hidden overflow-y-hidden h-10">
-        <div class="animate-marquee text-white whitespace-nowrap">
+      <div class="bg-blue w-full font-graphik relative flex overflow-x-hidden overflow-y-hidden h-10">
+        <div class="animate-marquee font-graphik text-white whitespace-nowrap">
           <span class="text-4xl mx-4">Custom Merch</span>
           <span class="text-4xl mx-4">></span>
           <span class="text-4xl mx-4">Swag Bags</span>
@@ -66,7 +76,7 @@
 
 
         <!-- Headers -->
-        <section class="felx pt-80 px-40 font-graphik">
+        <section class="felx pt-80 px-48 font-graphik">
             <h1 class="text-white" >
                 YOUR VISION, <br />
                 OUR EXPERTISE
@@ -102,7 +112,7 @@
         <!-- Top Brands section -->
         <section class="pt-80">
             <div>
-                <h1 class='text-white'>
+                <h1 class='text-white px-48'>
                     TOP BRANDS
                 </h1>
                 <div class="relative flex overflow-x-hidden overflow-y-hidden h-40 text-white">
@@ -119,13 +129,13 @@
 
         <!-- Call to action -->
         <div class="flex items-center justify-between h-32 px-4 bg-tang">
-            <div class="text-white font-inter font-semibold text-6xl mx-40">
+            <div class="text-white font-inter font-semibold text-5xl px-28">
                 LIKE WHAT YOU SEE?
             </div>
-            <button class="h-20 w-72 mx-40 py-2 text-4xl font-inter font-semibold text-white bg-tang transition-colors outline outline-4 outline-white rounded-full">
+            <button class="h-20 w-72 mx-28 py-2 text-4xl font-inter font-semibold text-white bg-tang transition-colors outline outline-4 outline-white rounded-full">
               Let's Talk
             </button>
-          </div>
+        </div>
           
 
         <!-- Dropdown Component -->
@@ -137,8 +147,7 @@
         <div id="footer"></div>
           
     </main>
-    <script>
-
+<script>
 // Navbar hide on scroll down, show on scroll up
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
@@ -213,6 +222,15 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(html => document.getElementById('infographic').innerHTML = html);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/components/projectButton.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('projectButton').innerHTML = html);
+});
+
+document.getElementById('enter-site').addEventListener('click', function() {
+    document.getElementById('landing-page').style.display = 'none';
+});
 
 
 
