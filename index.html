@@ -11,7 +11,7 @@
     <!-- Interstate font from personal adobe account, change to JMA account -->
   </head>
   <body class="bg-dark">
-    <div id="navbar"></div>>
+    <div id="navbar"></div>
     <!--Landing Screen-->
     <div id="landing-page" class="fixed inset-0 flex flex-col items-center justify-center bg-dark z-50">
         <img src="assets/jma_logo.png" alt="Company Logo" id="company-logo" class="max-w-1/8 h-60 opacity-0" style="animation: fadeIn 3s forwards;">
@@ -182,137 +182,67 @@ document.addEventListener("DOMContentLoaded", function() {
     typeOutText();
 });
 
-function duplicateScrollingContent() {
-    const container = document.getElementById('scrolling-container');
-    const content = document.getElementById('scrolling-content');
-    let contentWidth = content.offsetWidth;
-    const containerWidth = container.offsetWidth;
+// function duplicateScrollingContent() {
+//     const container = document.getElementById('scrolling-container');
+//     const content = document.getElementById('scrolling-content');
+//     let contentWidth = content.offsetWidth;
+//     const containerWidth = container.offsetWidth;
 
-    while (contentWidth < containerWidth * 2) {
-        const clone = content.cloneNode(true); // Clone the content
-        container.appendChild(clone); // Append the clone to the container
-        contentWidth += content.offsetWidth; // Update the total width
-    }
-}
+//     while (contentWidth < containerWidth * 2) {
+//         const clone = content.cloneNode(true); // Clone the content
+//         container.appendChild(clone); // Append the clone to the container
+//         contentWidth += content.offsetWidth; // Update the total width
+//     }
+// }
 
-// Initialize the duplication and setup an interval for scrolling
-window.onload = () => {
-    duplicateScrollingContent();
-    setInterval(() => {
-        const container = document.getElementById('scrolling-container');
-        container.scrollRight += 1; // Adjust this value for speed
-    }, 20); // Adjust this interval for speed
-};
+// // Initialize the duplication and setup an interval for scrolling
+// window.onload = () => {
+//     duplicateScrollingContent();
+//     setInterval(() => {
+//         const container = document.getElementById('scrolling-container');
+//         container.scrollRight += 1; // Adjust this value for speed
+//     }, 20); // Adjust this interval for speed
+// };
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/navbar.html')
+    fetch('/src/components/navbar.html')
         .then(response => response.text())
         .then(html => document.getElementById('navbar').innerHTML = html);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/footer.html')
+    fetch('/src/components/footer.html')
         .then(response => response.text())
         .then(html => document.getElementById('footer').innerHTML = html);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/infographic.html')
+    fetch('/src/components/infographic.html')
         .then(response => response.text())
         .then(html => document.getElementById('infographic').innerHTML = html);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/projectButton.html')
+    fetch('/src/components/projectButton.html')
         .then(response => response.text())
         .then(html => document.getElementById('projectButton').innerHTML = html);
 });
 
-document.getElementById('enter-site').addEventListener('click', function() {
-    document.getElementById('landing-page').style.display = 'none';
+// document.getElementById('enter-site').addEventListener('click', function() {
+//     document.getElementById('landing-page').style.display = 'none';
+// });
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const enterSiteButton = document.getElementById('enter-site');
+    if (enterSiteButton) {
+        enterSiteButton.addEventListener('click', function() {
+            document.getElementById('landing-page').style.display = 'none';
+        });
+    } else {
+        console.log('The button with ID "enter-site" was not found.');
+    }
 });
 
-
-
-
-
-
-      // document.addEventListener("DOMContentLoaded", function() {
-      //   const typedText = document.getElementById("typed-text");
-      //   const cursor = document.getElementById("cursor");
-      //   const text = "Distinctive branding solutions.";
-      //   let index = 0;
-
-      //   function typeOutText() {
-      //       if (index < text.length) {
-      //           let currentChar = text.charAt(index);
-      //           cursor.insertAdjacentText('beforebegin', currentChar);
-      //           index++;
-      //           setTimeout(typeOutText, 100); // Adjust typing speed if necessary
-      //       }
-      //   }
-
-      //   typeOutText();
-      // });
-
-//THIS CODE HAS EACH WORD ON A DIFFERENT LINE
-// document.addEventListener("DOMContentLoaded", function() {
-//     const typedText = document.getElementById("typed-text");
-//     const words = ["distinctive", "branding", "solutions"];
-//     let currentWordIndex = 0;
-//     let currentLetterIndex = 0;
-//     let typingSpeed = 100; // Speed of typing in milliseconds
-
-//     function typeOutText() {
-//         if (currentWordIndex < words.length) {
-//             if (currentLetterIndex < words[currentWordIndex].length) {
-//                 typedText.textContent += words[currentWordIndex].charAt(currentLetterIndex);
-//                 currentLetterIndex++;
-//                 setTimeout(typeOutText, typingSpeed);
-//             } else {
-//                 currentLetterIndex = 0;
-//                 currentWordIndex++;
-//                 if (currentWordIndex < words.length) {
-//                     typedText.textContent += '\n'; // Add a newline character for next word
-//                 }
-//                 setTimeout(typeOutText, 500); // Delay before next word
-//             }
-//         }
-//     }
-
-//     typeOutText();
-// });
-
-
-//THIS CODE DELETES AND WRITES NEW WORDS      
-//       document.addEventListener("DOMContentLoaded", function() {
-//     const typedText = document.getElementById("typed-text");
-//     const words = ["First Word", "Second Word", "Third Word"];
-//     let currentWordIndex = 0;
-//     let currentLetterIndex = 0;
-//     let typingSpeed = 100; // Speed of typing in milliseconds
-
-//     function typeOutText() {
-//         if (currentWordIndex < words.length) {
-//             if (currentLetterIndex <= words[currentWordIndex].length) {
-//                 typedText.innerHTML = words[currentWordIndex].slice(0, currentLetterIndex) + '<span aria-hidden="true"></span>';
-//                 currentLetterIndex++;
-//                 setTimeout(typeOutText, typingSpeed);
-//             } else {
-//                 currentLetterIndex = 0;
-//                 currentWordIndex++;
-//                 if (currentWordIndex < words.length) {
-//                     typedText.innerHTML += '<br>';
-//                 }
-//                 setTimeout(typeOutText, 500); // Delay before next word
-//             }
-//         }
-//     }
-
-//     typeOutText();
-// });
-
-
-  </script>
+</script>
 </body>
 </html>
