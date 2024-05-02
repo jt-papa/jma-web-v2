@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode : 'jit',
   content: [
-    "./index.html",
+    "src/index.html",
     "./src/**/*.{js,html}",
-    "components/navbar.html",
-    "components/footer.html",
-    "components/infographic.html",
-    "pages/WhoWeAre.html",
-    "pages/WhatWeDo.html",
-    "pages/Contact.html",
-    "pages/OurProcess.html",
-    "pages/OurWork.html",
+    "src/components/navbar.html",
+    "src/components/footer.html",
+    "src/components/infographic.html",
+    "src/pages/WhoWeAre.html",
+    "src/pages/WhatWeDo.html",
+    "src/pages/Contact.html",
+    "src/pages/OurProcess.html",
+    "src/pages/OurWork.html",
   ],
   theme: {
     colors: {

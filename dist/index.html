@@ -2,19 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="assets/jma_logo.png"/>
+    <link rel="icon" type="image/png" href="/assets/jma_logo-nD7S0ikx.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JMA - Promotional </title>
-    <link rel="stylesheet" href="index.css">
+    <title>JMA - Promotional </title>
     <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- Interstate font from personal adobe account, change to JMA account -->
+    <link rel="stylesheet" crossorigin href="/assets/index-upDYLJBZ.css">
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
     <!--Landing Screen-->
     <div id="landing-page" class="fixed inset-0 flex flex-col items-center justify-center bg-dark z-50">
-        <img src="assets/jma_logo.png" alt="Company Logo" id="company-logo" class="max-w-1/8 h-60 opacity-0" style="animation: fadeIn 3s forwards;">
+        <img src="/assets/jma_logo-nD7S0ikx.png" alt="Company Logo" id="company-logo" class="max-w-1/8 h-60 opacity-0" style="animation: fadeIn 3s forwards;">
         <button id="enter-site" class="mt-20 px-4 py-2 font-inter font-semibold text-2xl cursor-pointer text-dark bg-gl rounded-full">ENTER SITE</button>
     </div>
     <main>
@@ -86,7 +86,7 @@
                 We provide the creative spark and <br/> industry know-how to transform your <br/> brand’s vision into impactful merchandise.
             </p>
             <div class="pt-7">
-                <button class="bg-tang text-white items-center py-2 px-4 rounded-full">
+                <button id='start-project' class="bg-tang text-white items-center py-2 px-4 rounded-full">
                     Start a project
                 </button> 
             </div>
@@ -139,8 +139,9 @@
           
 
         <!-- Dropdown Component -->
-        
-        <div id="infographic"></div>
+        <div class="py-36">
+            <div id="infographic"></div>
+        </div>
         
 
         <!-- footer section -->
@@ -149,21 +150,21 @@
     </main>
 <script>
 // Navbar hide on scroll down, show on scroll up
-let lastScrollTop = 0;
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+// let lastScrollTop = 0;
+// const navbar = document.getElementById('navbar');
+// window.addEventListener('scroll', function() {
+//     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScroll > lastScrollTop) {
-        // Scrolling down
-        navbar.style.top = '-130px'; // Adjust this value based on your navbar's height
-    } else {
-        // Scrolling up or stopped
-        navbar.style.top = '0';
-    }
+//     if (currentScroll > lastScrollTop) {
+//         // Scrolling down
+//         navbar.style.top = '-130px'; // Adjust this value based on your navbar's height
+//     } else {
+//         // Scrolling up or stopped
+//         navbar.style.top = '0';
+//     }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-}, false);
+//     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+// }, false);
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -182,66 +183,55 @@ document.addEventListener("DOMContentLoaded", function() {
     typeOutText();
 });
 
-// function duplicateScrollingContent() {
-//     const container = document.getElementById('scrolling-container');
-//     const content = document.getElementById('scrolling-content');
-//     let contentWidth = content.offsetWidth;
-//     const containerWidth = container.offsetWidth;
-
-//     while (contentWidth < containerWidth * 2) {
-//         const clone = content.cloneNode(true); // Clone the content
-//         container.appendChild(clone); // Append the clone to the container
-//         contentWidth += content.offsetWidth; // Update the total width
-//     }
-// }
-
-// // Initialize the duplication and setup an interval for scrolling
-// window.onload = () => {
-//     duplicateScrollingContent();
-//     setInterval(() => {
-//         const container = document.getElementById('scrolling-container');
-//         container.scrollRight += 1; // Adjust this value for speed
-//     }, 20); // Adjust this interval for speed
-// };
-
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/src/components/navbar.html')
+    fetch('components/navbar.html')
         .then(response => response.text())
         .then(html => document.getElementById('navbar').innerHTML = html);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/src/components/footer.html')
+    fetch('components/footer.html')
         .then(response => response.text())
         .then(html => document.getElementById('footer').innerHTML = html);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/src/components/infographic.html')
+    fetch('components/infographic.html')
         .then(response => response.text())
         .then(html => document.getElementById('infographic').innerHTML = html);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/src/components/projectButton.html')
+    fetch('components/projectButton.html')
         .then(response => response.text())
         .then(html => document.getElementById('projectButton').innerHTML = html);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded and parsed')
+    document.getElementById('enter-site').addEventListener('click', function() {
+      document.getElementById('landing-page').style.display = 'none';
+    });
+  });
+
+  document.getElementById('start-project').addEventListener('click', function() {
+            window.location.href = '/pages/Contact.html'; // Destination URL
+        });
 
 // document.getElementById('enter-site').addEventListener('click', function() {
 //     document.getElementById('landing-page').style.display = 'none';
 // });
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    const enterSiteButton = document.getElementById('enter-site');
-    if (enterSiteButton) {
-        enterSiteButton.addEventListener('click', function() {
-            document.getElementById('landing-page').style.display = 'none';
-        });
-    } else {
-        console.log('The button with ID "enter-site" was not found.');
-    }
-});
+// window.addEventListener('DOMContentLoaded', (event) => {
+//     const enterSiteButton = document.getElementById('enter-site');
+//     if (enterSiteButton) {
+//         enterSiteButton.addEventListener('click', function() {
+//             document.getElementById('landing-page').style.display = 'none';
+//         });
+//     } else {
+//         console.log('The button with ID "enter-site" was not found.');
+//     }
+// });
 
 </script>
 </body>

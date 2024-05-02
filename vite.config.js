@@ -7,18 +7,13 @@ import path from 'path';
 const production = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
-  root: path.resolve(__dirname),
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
-  },
+  root: path.resolve(__dirname, 'src'),
   build: {
     outDir: resolve(__dirname, 'dist'),  // Output directory set relative to the project root
     emptyOutDir: true,                       // Clear the output directory before building
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),         // Main entry
+        main: resolve(__dirname, 'src/index.html'),         // Main entry
         about: resolve(__dirname, 'src/pages/WhoWeAre.html'),
         contact: resolve(__dirname, 'src/pages/Contact.html'),
         process: resolve(__dirname, 'src/pages/OurProcess.html'),
