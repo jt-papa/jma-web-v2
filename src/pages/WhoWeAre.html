@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   </head>
   <body class="bg-dark text-white">
     <div id="navbar"></div>
@@ -15,14 +18,19 @@
         <h1 class='header-typed' id="typed-text"><span id='cursor'></span></h1>
       </div>
   </div> -->
-  <div class="mx-28">
-    <div class="text-left text-white pt-60 uppercase font-inter font-regular pb-5  px-4 border-b">Who We Are</div>
-    <p class="pt-20 font-graphik font-regular text-[26px]">
-      JMA is a team of creative professionals dedicated to fulfilling your specific promotional needs. We pride ourselves on delivering exceptional service and tailor-made merchandise solutions to help your brand make a lasting impression
+  <div class="mx-28 pt-60">
+    <!-- <h1 class="text-white" >
+      We Know Promo
+    </h1> -->
+    <h1 class='header-typed' id="typed-text"><span id='cursor'></span></h1>
+    <div class="underline bg-tang"></div>
+    <p class="pt-20 w-3/5 font-manrope font-regular text-[26px]">
+      Since our inception in 1980, JMA has provided thousands of clients with exceptional service and tailor-made merchandise solutions. Over the years we have evolved alongside rapidly changing trends in retail fashion and technology while staying true to our family-owned roots. Our greatest strength lies in the relationships we’ve built, both with legacy clients and with the best suppliers in the biz.
     </p>
-    <section class="felx pt-80 px-24 font-graphik">
+    <div id="stats" class="py-32"></div>
+    <section class="pt-80 px-24 font-manrope">
       <h1 class="text-white" >
-          Your personal <br/> account manager
+          Your dedicated <br/> account team
       </h1>
       <div class="underline bg-tang"></div>
       <p class="text-white pt-10">
@@ -34,10 +42,10 @@
           </button> 
       </div>
   </section>
-  <section class="flex justify-end w-full pt-40 px-24 ml-0 font-graphik">
+  <section class="flex justify-end w-full pt-40 px-24 ml-0 font-manrope">
     <div class="flex flex-col">
       <h1 class="text-white" >
-          Sourcing experts
+          Sourcing gurus
       </h1>
       <div class="underline bg-blue"></div>
       <p class="text-white pt-10">
@@ -75,7 +83,7 @@
     document.addEventListener("DOMContentLoaded", function() {
     const typedTextContainer = document.getElementById("typed-text");
     const cursor = document.getElementById("cursor");
-    const text = "is branded merch";
+    const text = "We know promo";
     let index = 0;
 
     function typeOutText() {
@@ -98,6 +106,12 @@
     fetch('/components/footer.html')
         .then(response => response.text())
         .then(html => document.getElementById('footer').innerHTML = html);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('/components/stats.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('stats').innerHTML = html);
     });
 
     

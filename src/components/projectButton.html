@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/../index.css">
     <link rel="stylesheet" href="/https://use.typekit.net/wyw1mwv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Interstate font from personal adobe account, change to JMA account -->
     <style>
       @keyframes pulse-scale {
@@ -24,22 +27,37 @@
         50% {
           box-shadow: 0 0 0 15px rgba(213, 214, 216, 0.3);
         }
+        100% {
+        box-shadow: 0 0 0 30px rgba(213, 214, 216, 0);
       }
-    
-      .pulse-button {
-        animation: pulse-scale 3s infinite, pulse-color 3s infinite;
-      }
+    }
+
+    .pulse-button {
+      animation: pulse-scale 3s infinite, pulse-color 3s infinite;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #1d4ed8;
+      border-radius: 8px;
+      cursor: pointer;
+      outline: none;
+    }
     </style>
   </head>
 <body class="flex overflow-hidden">
 
-<button id="projectButton">
+<button id="projectButton" class="sticky z-20">
   New Project?
 </button>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('projectButton');
+
+  document.addEventListener('projectButton').addEventListener('click', function() {
+    window.location.href = '/pages/Contact.html'; // Destination URL
+  });
 
   setInterval(() => {
     // Apply the scale transform

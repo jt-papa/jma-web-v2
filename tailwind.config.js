@@ -12,6 +12,7 @@ export default {
     "src/pages/Contact.html",
     "src/pages/OurProcess.html",
     "src/pages/OurWork.html",
+    "src/components/services.html",
   ],
   theme: {
     colors: {
@@ -25,7 +26,8 @@ export default {
     extend: {
       fontFamily: {
         'inter': ['Interstate', 'sans-serif'],
-        'graphik': ['Graphik', 'sans-serif'],
+        'manrope': ['manrope', 'sans-serif'],
+        'man': ['Manrope', 'sans-serif'],
       },
       animation: {
         marquee: 'marquee 25s linear infinite',

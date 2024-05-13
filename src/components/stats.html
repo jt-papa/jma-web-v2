@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="text-white">
+      <div class="container mx-auto">
+          <div class="flex justify-between space-x-32">
+              <div class="p-5">
+                  <h2 class="text-left font-manrope text-2xl mb-10">Years In Business</h2>
+                  <div class="border-b"></div>
+                  <p class="text-center text-8xl font-semibold font-manrope mb-10 pt-10">43</p>
+                  <p class="font-manrope text-lg">We love creating long-lasting relationships with our clients. Our services extend beyond the delivery of the product into brand support, maintenance, and ongoing iterations of many of our digital and physical designs.</p>
+              </div>
+              <div class="p-5">
+                  <h2 class="text-left font-manrope text-2xl mb-10">Corporate Programs </h2>
+                  <div class="border-b"></div>
+                  <p class="text-center text-8xl font-manrope font-semibold mb-10 pt-10">339</p>
+                  <p class="font-manrope text-lg">Our agency's various departments specialize in unique individual offerings. Larger projects often require us to engage multiple teams to work closely together to create breathtaking products. The final products speak for themselves.</p>
+              </div>
+              <div class="p-5">
+                  <h2 class="text-left font-manrope text-2xl mb-10">Clients Served</h2>
+                  <div class="border-b"></div>
+                  <p class="text-center text-8xl font-manrope font-semibold mb-10 pt-10">3000+</p>
+                  <p class="font-manrope text-lg">Our multi-disciplinary team of creative technologists, experienced with both startup and enterprise projects, will be uniquely suited to solve your business challenges and achieve your business goals through thoughtful design.</p>
+              </div>
+          </div>
+      </div>
+  </body>
+  </html>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+    });
+
+  </script>

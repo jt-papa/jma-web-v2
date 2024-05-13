@@ -4,29 +4,29 @@
 
 
 @font-face {
-    font-family: 'Graphik';
-    src: url(/front-end/public/fonts/GraphikRegular.otf) format('otf');
+    font-family: 'manrope';
+    src: url(/front-end/public/fonts/manropeRegular.otf) format('otf');
     font-weight: 'regular';
     font-style: 'regular'
 }
 
 @font-face {
-    font-family: 'Graphik';
-    src: url(/front-end/public/fonts/GraphikMedium.otf) format('otf');
+    font-family: 'manrope';
+    src: url(/front-end/public/fonts/manropeMedium.otf) format('otf');
     font-weight: 'medium';
     font-style: 'regular'
 }
 
 @font-face {
-    font-family: 'Graphik';
-    src: url(/front-end/public/fonts/GraphikSemibold.otf) format('otf');
+    font-family: 'manrope';
+    src: url(/front-end/public/fonts/manropeSemibold.otf) format('otf');
     font-weight: 'semi-bold';
     font-style: 'regular'
 }
 
 @font-face {
-    font-family: 'Graphik';
-    src: url(/front-end/public/fonts/GraphikSuper.otf) format('otf');
+    font-family: 'manrope';
+    src: url(/front-end/public/fonts/manropeSuper.otf) format('otf');
     font-weight: 'bold';
     font-style: 'regular'
 }
@@ -104,7 +104,7 @@ h1 {
 }
 
 p {
-    font-family: 'Graphik';
+    font-family: 'manrope';
     font-weight: 'regular';
     font-style: 'regular';
     font-size: 32px;
@@ -117,11 +117,21 @@ p {
     border-radius: 20px;
 }
 
-.social-icon {
-    color: white; /* Default icon color */
-    font-size: 24px; /* Icon size */
-    margin-right: 20px; /* Space between icons */
+.underline2 {
+    position: relative;
+    overflow: hidden;
 }
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+
 
 
   @keyframes waveAnimation {

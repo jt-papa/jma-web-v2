@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
     <div class="pt-60">
-    <div id="infographic"></div>
+    <div id="services"></div>
     <div class="pt-32">
     <div class="flex items-center justify-between h-32 px-4 bg-tang">
       <div class="text-white font-inter font-semibold text-5xl px-28">
@@ -57,10 +60,10 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/infographic.html')
+    fetch('/components/services.html')
         .then(response => response.text())
-        .then(html => document.getElementById('infographic').innerHTML = html);
-});
+        .then(html => document.getElementById('services').innerHTML = html);
+    });
 
 
   </script>

@@ -18,11 +18,12 @@ export default defineConfig({
         contact: resolve(__dirname, 'src/pages/Contact.html'),
         process: resolve(__dirname, 'src/pages/OurProcess.html'),
         work: resolve(__dirname, 'src/pages/OurWork.html'),
-        services: resolve(__dirname, 'src/pages/WhatWeDo.html'),
+        whatWeDo: resolve(__dirname, 'src/pages/WhatWeDo.html'),
         footer: resolve(__dirname, 'src/components/footer.html'),
         infographic: resolve(__dirname, 'src/components/infographic.html'),
         navbar: resolve(__dirname, 'src/components/navbar.html'),
         projectButton: resolve(__dirname, 'src/components/projectButton.html'),
+        services: resolve(__dirname, 'src/components/services.html'),
       }
     }
   },
