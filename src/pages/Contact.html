@@ -79,19 +79,19 @@
     }, false);
   
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/navbar.html')
+    fetch('../components/navbar.html')
         .then(response => response.text())
         .then(html => document.getElementById('navbar').innerHTML = html);
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/footer.html')
+    fetch('../components/footer.html')
         .then(response => response.text())
         .then(html => document.getElementById('footer').innerHTML = html);
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/projectButton.html')
+    fetch('../components/projectButton.html')
         .then(response => response.text())
         .then(html => document.getElementById('projectButton').innerHTML = html);
     });

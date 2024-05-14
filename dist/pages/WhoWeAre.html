@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" crossorigin href="/assets/index-U4g6Xq8w.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-O8qc0Pmz.css">
   </head>
   <body class="bg-dark text-white">
     <div id="navbar"></div>
@@ -97,19 +97,19 @@
 });
   
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/navbar.html')
+    fetch('../components/navbar.html')
         .then(response => response.text())
         .then(html => document.getElementById('navbar').innerHTML = html);
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/footer.html')
+    fetch('../components/footer.html')
         .then(response => response.text())
         .then(html => document.getElementById('footer').innerHTML = html);
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('/components/stats.html')
+    fetch('../components/stats.html')
         .then(response => response.text())
         .then(html => document.getElementById('stats').innerHTML = html);
     });

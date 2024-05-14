@@ -8,6 +8,7 @@ const production = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
   root: path.resolve(__dirname, 'src'),
+  // base: process.env.NODE_ENV === 'production' ? '/jma-web-v2/' : '/',
   build: {
     outDir: resolve(__dirname, 'dist'),  // Output directory set relative to the project root
     emptyOutDir: true,                       // Clear the output directory before building

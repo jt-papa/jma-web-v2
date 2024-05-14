@@ -5,28 +5,28 @@
 
 @font-face {
     font-family: 'manrope';
-    src: url(/front-end/public/fonts/manropeRegular.otf) format('otf');
+    src: url(/public/fonts/manropeRegular.otf) format('otf');
     font-weight: 'regular';
     font-style: 'regular'
 }
 
 @font-face {
     font-family: 'manrope';
-    src: url(/front-end/public/fonts/manropeMedium.otf) format('otf');
+    src: url(/public/fonts/manropeMedium.otf) format('otf');
     font-weight: 'medium';
     font-style: 'regular'
 }
 
 @font-face {
     font-family: 'manrope';
-    src: url(/front-end/public/fonts/manropeSemibold.otf) format('otf');
+    src: url(/public/fonts/manropeSemibold.otf) format('otf');
     font-weight: 'semi-bold';
     font-style: 'regular'
 }
 
 @font-face {
     font-family: 'manrope';
-    src: url(/front-end/public/fonts/manropeSuper.otf) format('otf');
+    src: url(/public/fonts/manropeSuper.otf) format('otf');
     font-weight: 'bold';
     font-style: 'regular'
 }
