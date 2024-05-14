@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/jma_logo-Jw-0tIpM.png"/>
+    <link rel="icon" type="image/png" href="/jma-web-v2/front-end/assets/jma_logo-Jw-0tIpM.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JMA - Promotional </title>
     <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Interstate font from personal adobe account, change to JMA account -->
-    <link rel="stylesheet" crossorigin href="/assets/index-IVLGI9Uo.css">
+    <base href="/jma-web-v2/front-end/">
+    <link rel="stylesheet" crossorigin href="/jma-web-v2/front-end/assets/index-IVLGI9Uo.css">
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
@@ -301,7 +302,8 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function() {
     fetch('components/navbar.html')
         .then(response => response.text())
-        .then(html => document.getElementById('navbar').innerHTML = html);
+        .then(html => document.getElementById('navbar').innerHTML = html)
+        .catch(error => console.error('Error loading the navbar:', error));
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -330,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.getElementById('start-project').addEventListener('click', function() {
-            window.location.href = '/pages/Contact.html'; // Destination URL
+            window.location.href = 'pages/Contact.html'; // Destination URL
         });
 
         function selectCategory(categoryId) {
