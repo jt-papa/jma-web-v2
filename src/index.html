@@ -180,10 +180,10 @@
                           <div class="text-white py-7" style="font-size: 16px;">
                               Immerse yourself in boundless creativity and excellence with our Innovative Branded Merchandise Solutions. From bespoke product curation to exquisite artistry, we're here to elevate your brand's vision into unforgettable promotional experiences that captivate and inspire. 
                           </div>
-                          <div class='text-blue pt-4 text-2xl'>
+                          <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
                               Learn more
-                              <i class="fas fa-arrow-right pl-3 pb-4 pb-4"></i>
-                          </div>
+                              <i class="fas fa-arrow-right pl-3 pb-4"></i>
+                          </a>
                         </div>
                     </div>
                 
@@ -210,10 +210,10 @@
                     <div class="text-white py-7" style="font-size: 16px;">
                       Step into our Creative Hub, where imagination meets expertise, and trends blossom into reality. From concept to completion, we craft innovative designs that not only inspire but also anticipate the pulse of the industry, ensuring your brand stands out as a trendsetter.  
                     </div>
-                    <div class='text-blue pt-4 text-2xl'>
+                    <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
                       Learn more
                       <i class="fas fa-arrow-right pl-3 pb-4"></i>
-                  </div>
+                  </a>
                 </div>
       
       
@@ -238,10 +238,10 @@
                         <div class="text-white py-7" style="font-size: 16px;">
                           Embark on a digital journey and elevate your brand's presence with our transformative Store Front Experiences. From captivating storefronts to seamless user experiences, we're here to amplify your brand's online visibility and leave a lasting impression.  
                         </div>
-                        <div class='text-blue pt-4 text-2xl'>
+                        <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
                           Learn more
                           <i class="fas fa-arrow-right pl-3 pb-4"></i>
-                      </div>
+                      </a>
                     </div>
       
                 <!--LOGISTICS-->
@@ -267,10 +267,10 @@
                           Welcome to the heart of our operations, Global Logistics Central, where we seamlessly orchestrate fulfillment, distribution, and custom kitting experiences that transcend borders. With meticulous attention to detail and versatile solutions, we not only deliver products but also customize each kit to perfection, ensuring your brand's journey is as unique and remarkable as the products themselves. 
                         </div>
                             
-                        <div class='text-blue pt-4 text-2xl'>
+                        <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
                           Learn more
                           <i class="fas fa-arrow-right pl-3 pb-4"></i>
-                      </div>
+                      </a>
                     </div>
               </div>
           </div>
@@ -330,9 +330,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.getElementById('start-project').addEventListener('click', function() {
-            window.location.href = 'pages/Contact.html'; // Destination URL
+//   document.getElementById('start-project').addEventListener('click', function() {
+//             window.location.href = 'pages/Contact.html'; // Destination URL
+//         });
+    
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all elements with the class 'navigate-contact'
+    const navElements = document.querySelectorAll('.navigate-contact');
+
+    // Add a click event listener to each element
+    navElements.forEach(element => {
+        element.addEventListener('click', function() {
+            // Navigate to the contact page
+            window.location.href = 'pages/contact.html'; // Adjust the URL as needed
         });
+    });
+});
 
         function selectCategory(categoryId) {
     console.log('Category selected:', categoryId); // Check if this logs correctly
@@ -382,6 +395,17 @@ document.addEventListener('DOMContentLoaded', function() {
         promoCategory.classList.remove('text-white');
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('projectButton');
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var button = document.getElementById('projectButton'); // Get the button by ID
+    button.addEventListener('click', function() {
+        window.location.href = 'pages/Contact.html'; // Destination URL
+    });
+});
+})
 
 
 </script>
