@@ -25,6 +25,10 @@ export default defineConfig({
         navbar: resolve(__dirname, 'src/components/navbar.html'),
         projectButton: resolve(__dirname, 'src/components/projectButton.html'),
         services: resolve(__dirname, 'src/components/services.html'),
+        CVSKit: resolve(__dirname, 'src/pages/CVSKit.html'),
+        FedExHoodies: resolve(__dirname, 'src/pages/FedExHoodies.html'),
+        LightCubes: resolve(__dirname, 'src/pages/LightCubes.html'),
+        TrumpfMaple: resolve(__dirname, 'src/pages/TrumpfMaple.html'),
       }
     }
   },

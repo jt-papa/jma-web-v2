@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/jma_logo-Jw-0tIpM.png"/>
+    <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="/assets/index-hMx0eCFj.css">
+  </head>
+
+  <body class='bg-dark font-manrope text-white'>
+    <div id="navbar"></div>
+    <div class="font-manrope pt-60">This will be the title eventually</div>
+
+    <p class="text-2xl mx-28 pb-20"> </p>
+    <!-- Grid -->
+    <div class="grid grid-cols-2 gap-20 mx-28 pb-20">
+      <!-- first row -->
+      <div class="bg-gray-200">
+        <img src="/assets/Picture1-HCBP91_k.jpg" alt="Description of image">
+      </div>
+      <div class="p-4">
+        <p class="text-2xl">We love to help our clients show off. One of them was hosting a big event for their clients in Arizona. The weather was beautiful, especially at night, and part of the event included a cocktail party by the pool. Our client was looking for a unique way to represent their clients and add a cool, fun element to the décor. <br/><br/> We found an inspiration photo of some light up cubes that could be used as a side table, ottoman or even a small seat, and got to work. </p>
+      </div>
+      <!-- second row -->
+      <div>
+        <p class="text-2xl">A similar style cube was available through one of our promotional vendors, but they were smaller than what the client had envisioned, and they were typically imprinted in batches that all had the same logo. Since there were fourteen clients to represent, that wouldn’t cut it. </p>
+      </div>
+      <div class="bg-gray-200">
+        <img src="/assets/Picture4-hBigaIEi.png" alt="Description of image">
+      </div>
+      <!-- first row -->
+      <div class="bg-gray-200">
+        <img src="/assets/Picture2-KqYv5zzY.jpg" alt="Description of image">
+      </div>
+      <div class="p-4">
+        <p class="text-2xl">We sourced larger, blank cubes through an online retailer and sent them to one of our local decoration partners to add the logos. After some trial, error, and trips to the decoration studio to inspect them in person, we decided on custom cut vinyl decals for each cube. </p>
+      </div>
+      <!-- second row -->
+      <div class="p-4">
+        <p class="text-2xl">We sourced larger, blank cubes through an online retailer and sent them to one of our local decoration partners to add the logos. After some trial, error, and trips to the decoration studio to inspect them in person, we decided on custom cut vinyl decals for each cube.
+          <br/><br/>Our client, and their clients, were thrilled with the result. They used the cubes for the pool party as planned, then brought them inside and incorporated them into the rest of the week’s events.  </p>
+      </div>
+      <div class="bg-gray-200">
+        <img src="/assets/Picture3-eT_zStk6.jpg" alt="Description of image">
+      </div>
+    </div>
+    <p class="text-2xl mx-28"></p>
+
+    <div id="footer"></div>
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('navbar').innerHTML = html);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+    });
+    </script>
+  </body>
+
