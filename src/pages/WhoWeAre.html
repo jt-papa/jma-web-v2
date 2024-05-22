@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/ico" href="assets/favicon.ico"/>
+    <link rel="icon" type="image/ico" href="../assets/favicon.ico"/>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -27,8 +27,8 @@
     <p class="pt-20 w-3/5 font-manrope font-regular text-[26px] mx-28">
       Since our inception in 1980, JMA has provided thousands of clients with exceptional service and tailor-made merchandise solutions. Over the years we have evolved alongside rapidly changing trends in retail fashion and technology while staying true to our family-owned roots. Our greatest strength lies in the relationships we’ve built, both with legacy clients and with the best suppliers in the biz.
     </p>
-
-    <section class="pt-60 font-manrope">
+    <div id="stats" class="mx-32 pt-32"></div>
+    <section class="pt-32 font-manrope">
       <div class="flex mx-28">
           <!-- Left half with text and content -->
           <div class="w-2/3 flex flex-col justify-center p-4">
@@ -73,10 +73,10 @@
       </div>
   </div>
 
-
-    <!-- 
-    <div id="stats" class="py-32"></div>
-    <section class="pt-80 px-24 mx-28 font-manrope">
+  
+    
+   
+    <!--<section class="pt-80 px-24 mx-28 font-manrope">
       <h1 class="text-white underline">
           Your dedicated <br/> account team
       </h1>
@@ -140,6 +140,12 @@
     fetch('../components/projectButton.html')
         .then(response => response.text())
         .then(html => document.getElementById('projectButton').innerHTML = html);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/stats.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('stats').innerHTML = html);
     });
 
     
