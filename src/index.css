@@ -69,7 +69,7 @@
     overflow: hidden;
     position: relative;
     white-space: nowrap;
-    background-color: #7599bb;
+    background-color: #739bc7;
 }
 
 .scrolling-list {
@@ -101,6 +101,7 @@ h1 {
     font-weight: 'regular';
     font-style: 'regular';
     font-size: 64px;
+    text-decoration: none;
 }
 
 p {
@@ -111,10 +112,20 @@ p {
 }
 
 .underline {
-    width: 385px;
+    position: relative;
+    display: inline;
+    text-decoration: none;
+}
+.underline::after {
+    content: '';
     height: 7px;
-    flex-shrink: 0;
+    width: 100%;
+    background: #739bc7;
     border-radius: 20px;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    right: 0
 }
 
 .underline2 {
