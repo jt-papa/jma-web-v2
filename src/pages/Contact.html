@@ -21,13 +21,13 @@
     <div id="navbar"></div>
     
     <!-- FORM -->
-    <div class="pt-48 flex items-center justify-center">
-      <div class="text-4xl text-white font-inter flex justify-center items-center font-semibold mb-20">
+    <div class="pt-48 flex mx-28">
+      <div class="text-4xl text-white font-man flex font-semibold items-center mb-20">
         Start a new project with
         <img src="./../assets/jma_logo.png" alt="JMA" class="inline px-2 align-logo h-12"/>
       </div> 
     </div>
-      <div class="grid grid-cols-2 mx-28">
+      <div class="grid grid-cols-2 mx-28 pt-14">
         <form class="space-y-4 w-3/4">
             <!-- form fields -->
             <input type="text" name="name" placeholder="Your name*" required class="w-full px-3 py-2 border-gl border-b bg-dark font-manrope text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
@@ -43,18 +43,22 @@
     <div class="flex flex-col justify-between">
         <p class="text-xl mb-4 text-white font-manrope">I'm interested in...</p>
         <div class="space-y-2">
+          <div class="flex flex-row space-x-2">
             <!-- buttons -->
             <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Apparel</button>
             <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Gifting</button>
             <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Event marketing</button>
+          </div>
+          <div class="flex flex-row space-x-2">
             <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Retail brands</button>
             <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Inventory managment</button>
             <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Shipping solutions</button>
-
+          </div>
         </div>
-        <div class="mt-auto pb-3">
-            <button type="submit" class="px-4 py-2 bg-gl text-dark font-medium font-manrope rounded-full transition-colors">Send Message</button>
-        </div>
+        <a class="mt-auto pb-3 flex items-center">
+            <div type="submit" class="px-2 text-blue text-3xl font-medium font-manrope">Send message</div>
+            <i class="fas fa-arrow-right pl-2 text-blue text-3xl align-middle"></i>
+        </a>
     </div>
   </div>
 </div>

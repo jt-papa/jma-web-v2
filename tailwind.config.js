@@ -31,7 +31,7 @@ export default {
       },
       animation: {
         marquee: 'marquee 25s linear infinite',
-        marquee2: 'marquee2 25s linear infinite',
+        marquee2: 'marquee2 70s linear infinite',
         fadeIn: 'fadeIn 2s forwards',
       },
       keyframes: {
@@ -40,8 +40,8 @@ export default {
           '100%': { transform: 'translateX(-100%)' },
         },
         marquee2: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0%)' },
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
         fadeIn: {
           '0%': { opacity: '0' },

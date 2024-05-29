@@ -89,10 +89,10 @@
 
 @keyframes scroll-right {
     from {
-        transform: translateX(-50%);
+        transform: translateX(0%);
     }
     to {
-        transform: translateX(0%);
+        transform: translateX(-100%);
     }
 }
 
@@ -100,7 +100,7 @@ h1 {
     font-family: 'Interstate';
     font-weight: 'regular';
     font-style: 'regular';
-    font-size: 64px;
+    font-size: 58px;
     text-decoration: none;
 }
 
