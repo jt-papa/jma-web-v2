@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="/assets/favicon-EF4vRYG-.ico"/>
+    <title>Contact JMA</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+      .align-logo {
+        transform: translateY(11px)
+      }
+    </style>
+    <link rel="stylesheet" crossorigin href="/assets/index-bnxTg6Ta.css">
+  </head>
+  <body class="bg-dark">
+    <div id="navbar"></div>
+    
+    <!-- FORM -->
+    <div class="pt-48 flex mx-28">
+      <div class="text-4xl text-white font-man flex font-semibold items-center mb-20">
+        Start a new project with
+        <img src="/assets/jma_logo-Jw-0tIpM.png" alt="JMA" class="inline px-2 align-logo h-12"/>
+      </div> 
+    </div>
+      <div class="grid grid-cols-2 mx-28 pt-14">
+        <form class="space-y-4 w-3/4">
+            <!-- form fields -->
+            <input type="text" name="name" placeholder="Your name*" required class="w-full px-3 py-2 border-gl border-b bg-dark font-manrope text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="email" name="email" placeholder="Your email*" required class="w-full px-3 py-2 border-gl border-b bg-dark font-manrope text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="text" name="company" placeholder="Your Company" required class="w-full px-3 py-2 border-gl border-b bg-dark font-manrope text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <div class="py-3">
+              <textarea name="message" rows="5" placeholder="Tell us about your project*" required class="w-full px-3 bg-dark py-2 border-gl font-manrope text-white border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            </div>
+          </form>
+      
+    
+    <!-- Selections -->
+    <div class="flex flex-col justify-between">
+        <p class="text-xl mb-4 text-white font-manrope">I'm interested in...</p>
+        <div class="space-y-2">
+          <div class="flex flex-row space-x-2">
+            <!-- buttons -->
+            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Apparel</button>
+            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Gifting</button>
+            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Event marketing</button>
+          </div>
+          <div class="flex flex-row space-x-2">
+            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Retail brands</button>
+            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Inventory managment</button>
+            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Shipping solutions</button>
+          </div>
+        </div>
+        <a class="mt-auto pb-3 flex items-center">
+            <div type="submit" class="px-2 text-blue text-3xl font-medium font-manrope">Send message</div>
+            <i class="fas fa-arrow-right pl-2 text-blue text-3xl align-middle"></i>
+        </a>
+    </div>
+  </div>
+</div>
+  </div>
+    <div id="footer"></div>
+  </body>
+
+  <script>
+    // Navbar hide on scroll down, show on scroll up
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navbar.style.top = '-130px'; // Adjust this value based on your navbar's height
+        } else {
+            // Scrolling up or stopped
+            navbar.style.top = '0';
+        }
+    
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    }, false);
+  
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('navbar').innerHTML = html);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/projectButton.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('projectButton').innerHTML = html);
+    });
+
+      // JavaScript for button toggle behavior
+      document.querySelectorAll('.option-button').forEach(button => {
+          button.addEventListener('click', function() {
+              this.classList.toggle('bg-blue');
+              this.classList.toggle('opacity-100');
+              this.classList.toggle('border-blue');
+          });
+      });
+
+  </script>

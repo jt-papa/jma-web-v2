@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="/assets/favicon-EF4vRYG-.ico"/>
+    <link rel="stylesheet" href="https://use.typekit.net/wyw1mwv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="/assets/index-bnxTg6Ta.css">
+  </head>
+
+  <body class='bg-dark font-manrope text-white'>
+    <div id="navbar"></div>
+    <div class="font-manrope pt-60">This will be the title eventually</div>
+
+    <p class="text-2xl mx-28 pb-20"> </p>
+    <!-- Grid -->
+    <div class="grid grid-cols-2 gap-20 mx-28 pb-20">
+      <!-- first row -->
+      <div class="bg-gray-200">
+        <img src="/assets/FedExZPIT2-tZvdsZ8h.png" alt="Description of image">
+      </div>
+      <div class="p-4">
+        <p class="text-2xl">It’s the thought that counts. Especially when saying "thank you" to employees who go above and beyond. <br/><br/>
+            FedEx station 152 in Pittsburgh experienced an especially challenging week. They were already busier than ever and now a heavy snowstorm was about to hit.<br><br>
+            A dedicated group of employees came to the rescue, worked overtime (on the weekend!) amid the blizzard, and got the job done.</p>
+      </div>
+      <!-- second row -->
+      <div>
+        <p class="text-2xl">Clearly this dream team needed some recognition, but a typical award just wasn’t their style. After asking some “get to know them” questions about the employees, we developed multiple designs for a custom printed hoodie. We wanted to capture the dynamic personalities of the team, the city they represent, and give them something they would actually use.</p>
+      </div>
+      <div class="bg-gray-200">
+        <img src="/assets/FedExZPIT1-gm1OuItv.png" alt="Description of image">
+      </div>
+      <!-- first row -->
+      <div class="bg-gray-200">
+        <img src="/assets/FedExEnd-VGuk1a5g.JPG" alt="Description of image">
+      </div>
+      <div class="p-4">
+        <p class="text-2xl">We sourced a moderately priced, high quality hoodie and had them printed with the winning design chosen by the team’s manager. Each one was then personalized with the recipient’s name on the back. <br><br>
+            The result was a cool, comfy and thoughtful gift that made the team feel appreciated – while keeping them warm and promoting their brand, too.</p>
+      </div>
+      <!-- second row -->
+    </div>
+    <p class="text-2xl mx-28"></p>
+
+    <div id="footer"></div>
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('navbar').innerHTML = html);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('../components/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+    });
+    </script>
+  </body>
+
