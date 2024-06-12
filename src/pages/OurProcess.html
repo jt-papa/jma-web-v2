@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   </head>
   <body class="bg-dark">
-    <div id="navbar"></div>>
+    <div id="navbar"></div>
+    <div id="background-images"></div>
     <div class="px-28">
       
         <!-- Title with underline -->
@@ -151,4 +152,10 @@
         .then(html => document.getElementById('footer').innerHTML = html);
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('../components/bg.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('background-images').innerHTML = html);
+    });
+    
   </script>

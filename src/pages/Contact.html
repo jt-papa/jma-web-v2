@@ -19,6 +19,7 @@
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
+    <div id="background-images"></div>
     
     <!-- FORM -->
     <div class="pt-48 flex mx-28">
@@ -28,7 +29,7 @@
       </div> 
     </div>
       <div class="grid grid-cols-2 mx-28 pt-14">
-        <form class="space-y-4 w-3/4">
+        <form class="space-y-4 w-3/4" id="contactForm">
             <!-- form fields -->
             <input type="text" name="name" placeholder="Your name*" required class="w-full px-3 py-2 border-gl border-b bg-dark font-manrope text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
             <input type="email" name="email" placeholder="Your email*" required class="w-full px-3 py-2 border-gl border-b bg-dark font-manrope text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
@@ -45,20 +46,21 @@
         <div class="space-y-2">
           <div class="flex flex-row space-x-2">
             <!-- buttons -->
-            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Apparel</button>
-            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Gifting</button>
-            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Event marketing</button>
+            <button type="button" data-value="Apparel" class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Apparel</button>
+            <button type="button" data-value="Gifting" class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Gifting</button>
+            <button type="button" data-value="Event marketing" class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Event marketing</button>
           </div>
           <div class="flex flex-row space-x-2">
-            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Retail brands</button>
-            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Inventory managment</button>
-            <button class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Shipping solutions</button>
+            <button type="button" data-value="Retail brands" class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Retail brands</button>
+            <button type="button" data-value="Inventory management" class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Inventory managment</button>
+            <button type="button" data-value="Shipping solutions" class="option-button rounded-full px-4 py-2 border-2 font-manrope text-white border-gl opacity-100">Shipping solutions</button>
           </div>
         </div>
-        <a class="mt-auto pb-3 flex items-center">
+        <input type="hidden" name="selectedInterests" id="selectedInterests" value="">
+        <button type="submit" href="javascript:void(0);" onclick="document.getElementById('contactForm').submit();" class="mt-auto pb-3 flex items-center">
             <div type="submit" class="px-2 text-blue text-3xl font-medium font-manrope">Send message</div>
             <i class="fas fa-arrow-right pl-2 text-blue text-3xl align-middle"></i>
-        </a>
+        </button>
     </div>
   </div>
 </div>
@@ -67,6 +69,79 @@
   </body>
 
   <script>
+
+//Form Submission
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      console.log('Form submit handler called');
+      event.preventDefault();  // Stop the form from submitting normally
+
+      // Gather form data
+      const formData = {
+        name: document.querySelector('[name="name"]').value,
+        email: document.querySelector('[name="email"]').value,
+        company: document.querySelector('[name="company"]').value,
+        interests: document.getElementById('selectedInterests').value,
+        message: document.querySelector('[name="message"]').value
+      };
+
+      // Send the data using fetch
+      fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error('Failed to send message');
+        }
+      })
+      .then(text => {
+        alert('Thank You! Your message has been sent.');  // Show success message
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Oops! Something went wrong and we couldn\'t send your message.');
+      });
+    });
+  } else {
+    console.log('Form not found');
+  }
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.option-button');
+    const selectedInterests = [];
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            if (selectedInterests.includes(value)) {
+                const index = selectedInterests.indexOf(value);
+                selectedInterests.splice(index, 1);
+                this.classList.remove('bg-white', 'text-black');
+                this.classList.add('text-white', 'bg-transparent');
+            } else {
+                selectedInterests.push(value);
+                this.classList.add('bg-white', 'text-black');
+                this.classList.remove('text-white', 'bg-transparent');
+            }
+
+            document.getElementById('selectedInterests').value = selectedInterests.join(', ');
+        });
+    });
+});
+
     // Navbar hide on scroll down, show on scroll up
     let lastScrollTop = 0;
     const navbar = document.getElementById('navbar');
@@ -96,12 +171,6 @@
         .then(html => document.getElementById('footer').innerHTML = html);
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-    fetch('../components/projectButton.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('projectButton').innerHTML = html);
-    });
-
       // JavaScript for button toggle behavior
       document.querySelectorAll('.option-button').forEach(button => {
           button.addEventListener('click', function() {
@@ -110,5 +179,11 @@
               this.classList.toggle('border-blue');
           });
       });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('../components/bg.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('background-images').innerHTML = html);
+    });
 
   </script>

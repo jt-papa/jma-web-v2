@@ -14,6 +14,7 @@
   <body class="bg-dark">
     <div id="navbar"></div>
     <div class="px-28">
+        <div id="background-images"></div>
         <div class="text-left text-white pt-60 uppercase font-inter font-regular pb-5  px-4 border-b">Our Work</div>
         <a class="grid grid-cols-2 pt-10" href="LightCubes.html">
                 <img src="../assets/LightCubes/Picture1.jpg" class="col-start-1">
@@ -84,4 +85,10 @@
         .then(html => document.getElementById('footer').innerHTML = html);
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('../components/bg.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('background-images').innerHTML = html);
+    });
+    
   </script>

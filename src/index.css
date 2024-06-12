@@ -41,7 +41,8 @@
     font-size: 120px;
     padding-right: 2px;
     animation: blink 1s step-start infinite;
-    color: white
+    color: white;
+    white-space: pre-line;
 }
 
 .header-typed {
@@ -50,9 +51,6 @@
     font-weight: 500;
 }
 
-#typed-text {
-    white-space: pre-line;
-}
 
 #cursor {
     display: inline-block;

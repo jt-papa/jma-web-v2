@@ -19,6 +19,7 @@
       </div>
   </div> -->
   <div class="pt-60">
+    <div id="background-images"></div>
     <div class="pr-56">
       <div id="projectButton" class="fixed flex justify-center right-32 bottom-20 items-center h-14 w-48 p-2 text-2xl font-inter font-semibold text-dark bg-gl rounded-full focus:outline-none transition transform ease-in-out duration-300 pulse-button"></div>
     </div>
@@ -36,9 +37,8 @@
               <span class="underline">Your dedicated <br/> account team</span>
           </h1>
               <p class="text-white text-2xl pt-12 leading-normal">
-                Our account managers are experts in providing personalized service, working closely with you to understand your brand's unique identity and deliver on promotional goals.
-              </p>
-              <a href="pages/Contact.html" class="text-2xl pt-6 font-manrope font-semibold">
+                Our Account Managers and Coordinators become an extension of your brand. And they don’t just learn your brand guidelines. They also get to know your style, shopping preferences, and clients' expectations.              </p>
+              <a href="contact.html" class="text-2xl pt-6 font-manrope font-semibold">
                   <span class="text-blue">Start a project</span>
                       <i class="fas fa-arrow-right pl-2 text-blue text-2xl align-middle"></i>
                   </span>
@@ -47,14 +47,14 @@
       
           <!-- Right half with image -->
           <div class="w-2/3 flex justify-center items-center"> <!-- Added flexbox utilities for centering -->
-              <img src="../assets/package.jpg" alt="Descriptive Alt Text" class="max-w-96 object-cover rounded-lg">
+              <img src="../assets/box.jpg" alt="Descriptive Alt Text" class="max-w-96 object-cover rounded-lg">
           </div>
       </div>
 
       <div class="flex pt-60 mx-28">
           <!-- Left half with img -->
           <div class="w-1/2 flex justify-center items-center"> <!-- Added flexbox utilities for centering -->
-              <img src="../assets/selfieguy.jpg" alt="Descriptive Alt Text" class="max-w-96 object-cover rounded-lg">
+              <img src="../assets/bikerLOGO.png" alt="Descriptive Alt Text" class="max-w-96 object-cover rounded-lg">
           </div>
       
       
@@ -64,9 +64,8 @@
           <span class="underline">Sourcing gurus</span>
       </h1>
           <p class="text-white text-2xl pt-12 leading-normal">
-            You dream it, we source it. Our global network of suppliers and manufacturers ensures that we can deliver on any request.
-          </p>
-          <a href="pages/Contact.html" class="text-2xl pt-6 font-manrope font-semibold">
+            Every time we think we’ve seen it all, our clients challenge us to create new and innovative ideas. We use that experience and knowledge to give you the best and most cost-effective choices available. If we still can’t find exactly what you need, we can build it!</p>
+          <a href="contact.html" class="text-2xl pt-6 font-manrope font-semibold">
               <span class="text-blue">View catalog</span>
                   <i class="fas fa-arrow-right pl-2 text-blue text-2xl align-middle"></i>
               </span>
@@ -149,6 +148,10 @@
         .then(html => document.getElementById('stats').innerHTML = html);
     });
 
-    
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('../components/bg.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('background-images').innerHTML = html);
+    });
 
   </script>

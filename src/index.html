@@ -15,22 +15,28 @@
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
+   
     <!-- Landing Screen-->
-    <!-- <div id="landing-page" class="fixed inset-0 flex flex-col items-center justify-center bg-dark z-50">
+    <div id="landing-page" class="fixed inset-0 flex flex-col items-center justify-center bg-dark z-50">
         <img src="assets/jma_logo.png" alt="Company Logo" id="company-logo" class="max-w-1/8 h-60 opacity-0" style="animation: fadeIn 3s forwards;">
-        <button id="enter-site" class="mt-20 px-4 py-2 font-inter font-semibold text-2xl cursor-pointer text-dark bg-gl rounded-full">ENTER SITE</button>
-    </div> -->
+        <button id="enter-site" class="mt-20 px-6 py-3 font-inter font-semibold text-xl cursor-pointer text-dark bg-gl rounded-full">ENTER SITE</button>
+    </div>
     <main>
+        <div id="background-images"></div>
         <!-- Hero section -->
-      <div class="flex pt-32 px-28 w-full">
-          <div class='flex justify-right items-right w-1/2 h-[550px] overflow-hidden'>  
+        
+      <div class="flex pt-36 w-full z-40">
+          <div class='flex px-36 justify-right items-right w-1/2 h-[550px] overflow-hidden'>  
             <h1 class='header-typed' id="typed-text"><span id='cursor'></span></h1>
           </div>
+          <!-- <div>
+            <img src="assets/banner.png" class='w-full object-cover' alt="Banner Image">
+        </div> -->
       </div>
 
       <!-- Static Button -->
       <div class="pr-56">
-        <div id="projectButton" class="fixed flex justify-center right-32 bottom-20 items-center h-14 w-48 p-2 text-xl font-inter font-semibold text-dark bg-gl rounded-full focus:outline-none transition transform ease-in-out duration-300 pulse-button"></div>
+        <div id="projectButton" class="fixed flex justify-center z-40 right-32 bottom-20 items-center h-14 w-48 p-2 text-xl font-inter font-semibold text-dark bg-gl rounded-full focus:outline-none transition transform ease-in-out duration-300 pulse-button"></div>
       </div>
 
       <!-- Marquee -->
@@ -84,7 +90,7 @@
         <section class="pt-60 font-manrope">
             <div class="flex mx-28">
                 <!-- Left half with text and content -->
-                <div class="w-1/2 flex flex-col mx-8 justify-center p-4">
+                <div class="w-1/2 flex flex-col justify-center p-4">
                     <h1 class="text-white text-5xl leading-normal">
                         <span class="underline">Your vision, our expertise</span>
                     </h1>
@@ -100,33 +106,34 @@
                 </div>
             
                 <!-- Right half with image -->
-                <div class="w-1/3 flex justify-end items-center"> <!-- Added flexbox utilities for centering -->
-                    <img src="assets/genzheadphones.jpg" alt="Descriptive Alt Text" class="max-w-96 object-cover rounded-lg">
+                <div class="flex justify-center items-center w-1/2 px-10"> <!-- Added flexbox utilities for centering -->
+                    <img src="assets/headphonesLOGO.png" alt="Descriptive Alt Text" class="w-4/5 object-cover rounded-lg">
                 </div>
             </div>
-
+            
             <div class="flex pt-36 mx-28">
                 <!-- Left half with img -->
-                <div class="w-1/2 flex justify-center items-center"> <!-- Added flexbox utilities for centering -->
-                    <img src="assets/waterbottlepool.jpg" alt="Descriptive Alt Text" class="max-w-96 object-cover rounded-lg">
+                <div class="flex justify-center items-center w-1/2 px-10"> <!-- Added flexbox utilities for centering -->
+                    <img src="assets/poolLOGO.png" alt="Descriptive Alt Text" class="w-4/5 object-cover rounded-lg">
                 </div>
             
             
                 <!-- Right half with content -->
-            <div class="w-1/2 flex flex-col justify-center p-4 mx-8">
-                <h1 class="text-white text-5xl leading-normal">
-                    <span class="underline">Sourcing simplified</span>
-                </h1>
-                <p class="text-white text-2xl pt-12 leading-normal">
-                    You dream it, we source it. Our global network of suppliers and manufacturers ensures that we can deliver on any request.
-                </p>
-                <a href="pages/Contact.html" class="text-2xl pt-6 font-manrope font-semibold">
-                    <span class="text-blue">View catalog</span>
-                        <i class="fas fa-arrow-right pl-2 text-blue text-2xl align-middle"></i>
-                    </span>
-                </a>
+                <div class="w-1/2 flex flex-col justify-center p-4">
+                    <h1 class="text-white text-5xl leading-normal">
+                        <span class="underline">Sourcing simplified</span>
+                    </h1>
+                    <p class="text-white text-2xl pt-12 leading-normal">
+                        You dream it, we source it. Our global network of suppliers and manufacturers ensures that we can deliver on any request.
+                    </p>
+                    <a href="pages/Contact.html" class="text-2xl pt-6 font-manrope font-semibold">
+                        <span class="text-blue">View catalog</span>
+                            <i class="fas fa-arrow-right pl-2 text-blue text-2xl align-middle"></i>
+                        </span>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Top Brands section -->
         <section class="pt-36">
@@ -273,140 +280,144 @@
 
         
 
-        <div class="text-left text-white pt-60 uppercase font-inter font-regular pb-5 mx-28 px-4 border-b">What We Do</div>
-          
-        <!-- SERVICES ************************************************************************************************************** -->
+    <div class="text-left text-white b-32 uppercase pt-36 font-inter font-regular pb-5 mx-28 px-4 border-b">What We Do</div>
+    <div class="flex flex-col md:flex-row mx-28 pt-32">
+      <!-- Categories column -->
+      <div id="category-container" class="md:flex md:flex-col md:justify-between md:space-y-16 md:w-1/2 font-man">
+          <div class="category text-5xl text-white cursor-pointer" id="promo">Merchandising</div>
+          <div class="category text-5xl text-white cursor-pointer" id="creative">Creative Hub</div>
+          <div class="category text-5xl text-white cursor-pointer" id="digital">Digital Storefronts</div>
+          <div class="category text-5xl text-white cursor-pointer" id="logistics">Logistics & Fulfillment</div>
+      </div>
 
-        <div class="flex flex-col md:flex-row mx-28 pt-36 text-black">
-            <!-- Categories column -->
-            <div id="category-container" class="md:flex md:flex-col md:justify-between md:space-y-16 md:w-1/2 font-man">
-                <div class="category text-5xl text-white cursor-pointer" id="promo">Promotional Solutions</div>
-                <div class="category text-5xl text-white cursor-pointer" id="creative">Creative Hub</div>
-                <div class="category text-5xl text-white cursor-pointer" id="digital">Digital Storefronts</div>
-                <div class="category text-5xl text-white cursor-pointer" id="logistics">Logistics & Fulfillment</div>
-            </div>
-      
-            <!-- Content column -->
-            <div class="md:w-3/5 font-man border-b border-white">
-      
-                <!--PROMO-->
-                    <div id="content-promo" class="content-category flex flex-col space-y-4">
-                        <!-- Buttons (2a) -->
-                        <div class="md:flex md:flex-wrap">
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Industry Insights</button>
-                            <!-- <button class="rounded-full bg-gl text-black py-2 px-4" style="height: 40px; font-size: 16px;">Promotional product selection and sourcing</button> -->
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Liscensed Merchandise</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Premium Retail Brands</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Brand Compliance</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Event Marketing</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Global Sourcing</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Decoration Solutions</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Eco-friendly Products</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Product Customization</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Client & Employee Gifting</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Awards & Recognition</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Pop-up Stores</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Marketing ROI Analysis</button>
-                        </div>
-                        <!-- Caption (2b) -->
-                        <div class="grid">
-                          <div class="text-white py-7" style="font-size: 16px;">
-                              Immerse yourself in boundless creativity and excellence with our Innovative Branded Merchandise Solutions. From bespoke product curation to exquisite artistry, we're here to elevate your brand's vision into unforgettable promotional experiences that captivate and inspire. 
-                          </div>
-                          <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
-                              Learn more
-                              <i class="fas fa-arrow-right pl-3 pb-4"></i>
-                          </a>
-                        </div>
-                    </div>
-                
-      
-                <!--CREATIVE-->
-                <div id="content-creative" class="content-category flex flex-col space-y-4" style="display: none">
-                    <!-- Buttons (2a) -->
-                    <div class="md:flex md:flex-wrap">
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Custom Merch Design</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Product Samples</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Virtual Mockups</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Creative Campaigns</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Collateral Design</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Packaging Design & Branding</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Content Development</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Image Editing</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Graphic Design</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Brand Identity Development</button>
-                        <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Video & Animation Production</button>
-                        
-                        
-                    </div>
-                    <!-- Caption (2b) -->
+      <!-- Content column -->
+      <div class="md:w-3/5 font-man border-b border-white">
+
+
+         <!--PROMO-->
+              <div id="content-promo" class="content-category flex flex-col space-y-4">
+
+                <!-- Caption (2b) -->
+
+
+                  <!-- Buttons (2a) -->
+                  <div class="md:flex md:flex-wrap">
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Industry Insights</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Product selection and sourcing</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Liscensed Merchandise</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Premium Retail Brands</button>
+                      <!-- <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Brand Compliance</button> -->
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Event Marketing</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Global Sourcing</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Decoration Solutions</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Eco-friendly Products</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Product Customization</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Client & Employee Gifting</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Awards & Recognition</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Pop-up Stores</button>
+                      <!-- <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Marketing ROI Analysis</button> -->
+                  </div>
+                  <div class="grid">
                     <div class="text-white py-7" style="font-size: 16px;">
-                      Step into our Creative Hub, where imagination meets expertise, and trends blossom into reality. From concept to completion, we craft innovative designs that not only inspire but also anticipate the pulse of the industry, ensuring your brand stands out as a trendsetter.  
+                        Immerse yourself in boundless creativity and excellence with our Innovative Branded Merchandise Solutions. From bespoke product curation to exquisite artistry, we're here to elevate your brand's vision into unforgettable promotional experiences that inspire. 
                     </div>
-                    <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
-                      Learn more
-                      <i class="fas fa-arrow-right pl-3 pb-4"></i>
-                  </a>
+                    
                 </div>
-      
-      
-                <!--DIGITAL-->
-                    <div id="content-digital" class="content-category flex flex-col space-y-4" style="display: none">
-                        <!-- Buttons (2a) -->
-                        <div class="md:flex md:flex-wrap">
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Branded Presentation Kits</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Customer Owned Release Programs</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Point of Purchase Programs</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Custom Online Stores</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Microsite Creation & Management</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">UX Design and Testing</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Analytics & Performance Tracking</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">SEO Configuration</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Punch-out Management Systems</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Mobile eCommerce Optimization</button>
-                            
-                        </div>
-                        
-                        <!-- Caption (2b) -->
-                        <div class="text-white py-7" style="font-size: 16px;">
-                          Embark on a digital journey and elevate your brand's presence with our transformative Store Front Experiences. From captivating storefronts to seamless user experiences, we're here to amplify your brand's online visibility and leave a lasting impression.  
-                        </div>
-                        <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
-                          Learn more
-                          <i class="fas fa-arrow-right pl-3 pb-4"></i>
-                      </a>
-                    </div>
-      
-                <!--LOGISTICS-->
-                    <div id="content-logistics" class="content-category flex flex-col space-y-4" style="display: none">
-                        <!-- Buttons (2a) -->
-                        <div class="md:flex md:flex-wrap">
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Order Fullfillment Services</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Custom Kitting</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Gift Wrapping</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">On-demand Programs</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Freight Management Solutions</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Supply Chain Optimization</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Returns Management</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Multiple Distrobution Center Management</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">QC Inspections</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Import/Export Services</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Inventory Management & Warehousing</button>
-                            <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Vendor Compliance</button>
-                        </div>
-                        
-                        <!-- Caption (2b) -->
-                        <div class="text-white py-7" style="font-size: 16px;">
-                          Welcome to the heart of our operations, Global Logistics Central, where we seamlessly orchestrate fulfillment, distribution, and custom kitting experiences that transcend borders. With meticulous attention to detail and versatile solutions, we not only deliver products but also customize each kit to perfection, ensuring your brand's journey is as unique and remarkable as the products themselves. 
-                        </div>
-                            
-                        <a class='text-blue pt-4 text-2xl' href="pages/Contact.html">
-                          Learn more
-                          <i class="fas fa-arrow-right pl-3 pb-4"></i>
-                      </a>
-                    </div>
+                  <a class='text-blue pt-4 text-2xl'  href="pages/Contact.html">
+                    Learn more
+                    <i class="fas fa-arrow-right pl-3 pb-4"></i>
+                </a>
+                  
               </div>
+          
+
+          <!--CREATIVE-->
+          <div id="content-creative" class="content-category flex flex-col space-y-4" style="display: none">
+              <!-- Buttons (2a) -->
+              <div class="md:flex md:flex-wrap">
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Custom Merch Design</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Product Samples</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Virtual Mockups</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Creative Campaigns</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Collateral Design</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Packaging Design & Branding</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Content Development</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Image Editing</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Graphic Design</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Brand Identity Development</button>
+                  <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Video & Animation Production</button>
+                  
+                  
+              </div>
+              <!-- Caption (2b) -->
+              <div class="text-white py-7" style="font-size: 16px;">
+                Step into our Creative Hub, where imagination meets expertise, and trends blossom into reality. From concept to completion, we craft innovative designs that not only inspire but also anticipate the pulse of the industry, ensuring your brand stands out as a trendsetter.  
+              </div>
+              <a class='text-blue pt-4 text-2xl'  href="pages/Contact.html">
+                Learn more
+                <i class="fas fa-arrow-right pl-3 pb-4"></i>
+                </a>
           </div>
+
+
+          <!--DIGITAL-->
+              <div id="content-digital" class="content-category flex flex-col space-y-4" style="display: none">
+                  <!-- Buttons (2a) -->
+                  <div class="md:flex md:flex-wrap">
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Branded Presentation Kits</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Customer Owned Release Programs</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Point of Purchase Programs</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Custom Online Stores</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Microsite Creation & Management</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">UX Design</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Performance Tracking</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">SEO</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Punch-out Management</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Mobile Optimization</button>
+                      
+                  </div>
+                  
+                  <!-- Caption (2b) -->
+                  <div class="text-white py-7" style="font-size: 16px;">
+                    Embark on a digital journey and elevate your brand's presence with our transformative Store Front Experiences. From captivating storefronts to seamless user experiences, we're here to amplify your brand's online visibility and leave a lasting impression.  
+                  </div>
+                  <a class='text-blue pt-4 text-2xl'  href="pages/Contact.html">
+                    Learn more
+                    <i class="fas fa-arrow-right pl-3 pb-4"></i>
+                  </a>
+              </div>
+
+          <!--LOGISTICS-->
+              <div id="content-logistics" class="content-category flex flex-col space-y-4" style="display: none">
+                  <!-- Buttons (2a) -->
+                  <div class="md:flex md:flex-wrap">
+                      <!-- <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Order Fullfillment Services</button> -->
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Custom Kitting</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Gift Wrapping</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">On-demand Programs</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Freight & Shipping Solutions</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Supply Chain Optimization</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Returns Management</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Multiple Distribution Centers</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">QC Inspections</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Import/Export Services</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Inventory Management & Warehousing</button>
+                      <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Customs Clearance</button>
+                      <!-- <button class="rounded-full bg-gl cursor-default text-black py-2 px-4 mb-4 mr-4" style="height: 40px; font-size: 16px;">Vendor Compliance</button> -->
+                  </div>
+                  
+                  <!-- Caption (2b) -->
+                  <div class="text-white py-7" style="font-size: 16px;">
+                    Welcome to the heart of our operations, where we seamlessly orchestrate fulfillment, distribution, and custom kitting experiences. We not only deliver products but customize each kit to perfection, ensuring your brand's journey is as remarkable as the products themselves. 
+                  </div>
+                      
+                  <a class='text-blue pt-4 text-2xl'  href="pages/Contact.html">
+                    Learn more
+                    <i class="fas fa-arrow-right pl-3 pb-4"></i>
+                  </a>
+              </div>
+        </div>
+    </div>
           <!-- SERVICES ************************************************************************************************************** -->
 
         <!-- footer section -->
@@ -418,7 +429,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const typedTextContainer = document.getElementById("typed-text");
     const cursor = document.getElementById("cursor");
-    const text = "distinctive branding solutions.";
+    const text = "Distinctive branding solutions_";
     let index = 0;
 
     function typeOutText() {
@@ -444,16 +455,17 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(html => document.getElementById('footer').innerHTML = html);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('components/infographic.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('infographic').innerHTML = html);
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch('components/projectButton.html')
         .then(response => response.text())
         .then(html => document.getElementById('projectButton').innerHTML = html);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('components/bg.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('background-images').innerHTML = html);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
