@@ -22,6 +22,7 @@ export default defineConfig({
         whatWeDo: resolve(__dirname, 'src/pages/WhatWeDo.html'),
         footer: resolve(__dirname, 'src/components/footer.html'),
         infographic: resolve(__dirname, 'src/components/infographic.html'),
+        bg: resolve(__dirname, 'src/components/bg.html'),
         navbar: resolve(__dirname, 'src/components/navbar.html'),
         projectButton: resolve(__dirname, 'src/components/projectButton.html'),
         services: resolve(__dirname, 'src/components/services.html'),
@@ -45,11 +46,4 @@ export default defineConfig({
       ],
     },
   },
-  // server: {
-  //   proxy: {
-  //     '/api': 'http://localhost:8000',
-  //     changeOrigin: true,
-  //     rewrite: (path) => path.replace(/^\/api/, ''),
-  //   }
-  // }
 });
