@@ -15,21 +15,23 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),         // Main entry
-        about: resolve(__dirname, 'src/pages/WhoWeAre.html'),
+        whoWeAre: resolve(__dirname, 'src/pages/WhoWeAre.html'),
         contact: resolve(__dirname, 'src/pages/Contact.html'),
         process: resolve(__dirname, 'src/pages/OurProcess.html'),
         work: resolve(__dirname, 'src/pages/OurWork.html'),
         whatWeDo: resolve(__dirname, 'src/pages/WhatWeDo.html'),
+        CVSKit: resolve(__dirname, 'src/pages/CVSKit.html'),
+        FedExHoodies: resolve(__dirname, 'src/pages/FedExHoodies.html'),
+        LightCubes: resolve(__dirname, 'src/pages/LightCubes.html'),
+        TrumpfMaple: resolve(__dirname, 'src/pages/TrumpfMaple.html'),
         footer: resolve(__dirname, 'src/components/footer.html'),
         infographic: resolve(__dirname, 'src/components/infographic.html'),
         bg: resolve(__dirname, 'src/components/bg.html'),
         navbar: resolve(__dirname, 'src/components/navbar.html'),
         projectButton: resolve(__dirname, 'src/components/projectButton.html'),
         services: resolve(__dirname, 'src/components/services.html'),
-        CVSKit: resolve(__dirname, 'src/pages/CVSKit.html'),
-        FedExHoodies: resolve(__dirname, 'src/pages/FedExHoodies.html'),
-        LightCubes: resolve(__dirname, 'src/pages/LightCubes.html'),
-        TrumpfMaple: resolve(__dirname, 'src/pages/TrumpfMaple.html'),
+        stats: resolve(__dirname, 'src/components/stats.html'),
+ 
       }
     }
   },
