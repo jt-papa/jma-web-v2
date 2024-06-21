@@ -21,6 +21,7 @@ export default {
       tang: '#739bc7',
       blue: '#739bc7',
       white: 'white',
+      whiteFade: 'rgba(255, 255, 255, 0.6)',
       gl: '#d5d6d8',
     },
     extend: {
