@@ -9,7 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" crossorigin href="/assets/index-khi_wnlq.css">
+    <style>
+      .custom-line::before {
+        content: '';
+        display: block;
+        height: 7px;  /* height of the line */
+        width: 100%;  /* make the line as wide as its container */
+        background: #739bc7;  /* color of the line */
+        border-radius: 20px;  /* rounded corners */
+        position: absolute;
+        top: 0;  /* position at the top of the parent */
+        left: 0;
+      }
+    </style>
+    
+   
+    
+    <link rel="stylesheet" crossorigin href="/assets/index-IR-4mo5I.css">
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
@@ -102,10 +118,16 @@
               <div class="md:col-start-7 md:col-span-5">
                   <div class="w-12 h-12 bg-gl rounded-full text-dark text-xl font-inter font-bold flex items-center justify-center">06</div>
                 <div class="flex flex-col px-10">
-                <div class="md:ml-4">
-                  <div class="underline text-4xl font-semibold">Launch</div>
-                  <p class=" pt-10 text-xl">Time to bring your custom site to life! We make it easier than ever for your team to access and purchase company merch. We’ll oversee your ongoing program to maximize utility, look for efficiencies and continuously enhance your offerings.</p>
+                <!-- <div class="md:ml-4">
+                  <div class="text-4xl font-semibold pb-6">Launch</div>
+                  <p class=" border-t-8 border-blue rounded-lg pt-4 text-xl">Time to bring your custom site to life! We make it easier than ever for your team to access and purchase company merch. We’ll oversee your ongoing program to maximize utility, look for efficiencies and continuously enhance your offerings.</p>
+                </div> -->
+
+                <div class="relative pt-12">  <!-- Ensure there's padding at the top for the line -->
+                  <div class="text-4xl font-semibold">Launch</div>
+                  <p class="relative custom-line text-xl mt-4 pt-6">Time to bring your custom site to life! We make it easier than ever for your team to access and purchase company merch. We’ll oversee your ongoing program to maximize utility, look for efficiencies and continuously enhance your offerings.</p>
                 </div>
+
               </div>
             </div>
           </div>
