@@ -140,6 +140,16 @@ p {
     opacity: 1;
 }
 
+.custom-grid {
+    display: grid;
+    grid-template-rows: auto min-content; /* auto for the image, min-content for the text */
+}
+
+.custom-img {
+    height: 500px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the area properly */
+}
+
 
 
 

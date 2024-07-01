@@ -9,49 +9,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" crossorigin href="/assets/index-IR-4mo5I.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-9P8eoriU.css">
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
     <div class="px-28">
-        <div id="background-images"></div>
-        <div class="text-left text-white pt-60 uppercase font-inter font-regular pb-5  px-4 border-b">Our Work</div>
-        <a class="grid grid-cols-2 pt-10" href="LightCubes.html">
-                <img src="/assets/Picture1-HCBP91_k.jpg" class="col-start-1">
-                <div class="col-start-2 text-white">
-                    <div class="w-12 h-12 bg-gl rounded-full text-dark text-xl font-inter font-bold flex items-center justify-center">01</div>
-                    <div class="text-4xl font-semibold pt-5">Aetna - Illuminating client relationships with customized decor</div>
-                    <p class=" pt-5 text-xl"></p>
+        <!-- <div id="background-images"></div> -->
+        <div class="pt-52 pb-20"><h1 class='header-typed underline' id="typed-text"><span id='cursor'></span></h1></div>
+        <div class="grid grid-cols-2">
+            <a class="pt-10 col-span-1 custom-grid" href="LightCubes.html">
+                    <img src="/assets/Picture1-T0XziAod.jpg" class="rounded-lg h-[480px]">
+                    <div class="row-start-2 text-white">
+                        <div class="text-3xl font-semibold pt-2">Aetna</div>
+                        <div class="text-3xl font-regular pt-2">Illuminating client relations with custom decor</div>
+                    </div>
+            </a>
+            <a class="pt-10 col-span-1 custom-grid" href="TrumpfMaple.html">
+                <div class="col-start-2">
+                    <img src="/assets/TrumpfSyrup-CtBs1H26.jpg" class="rounded-lg h-[480px]">
                 </div>
-        </a>
-        <a class="grid grid-cols-2 pt-20" href="TrumpfMaple.html">
-            <div class="col-start-1 text-white">
-                <div class="w-12 h-12 bg-gl rounded-full text-dark text-xl font-inter font-bold flex items-center justify-center">02</div>
-                <div class="text-4xl font-semibold pt-5">Trumpf - Celebrating 100 years with style</div>
-                <p class=" pt-5 text-xl"></p>
-            </div>
-            <div class="col-start-2">
-                <img src="/assets/TrumpfSyrup-wfg6qNSw.jpg" class="col-start-2">
-            </div>
-        </a>
-        <a class="grid grid-cols-2 pt-10" href="FedExHoodies.html">
-            <img src="/assets/FedExZPIT2-tZvdsZ8h.png" class="col-start-1 w-5/6">
-            <div class="col-start-2 text-white">
-                <div class="w-12 h-12 bg-gl rounded-full text-dark text-xl font-inter font-bold flex items-center justify-center">03</div>
-                <div class="text-4xl font-semibold pt-5">FedEx - A warm thanks for cold days</div>
-                <p class=" pt-5 text-xl"></p>
-            </div>
-        <a class="grid grid-cols-2 pt-20" href="CVSKit.html">
-            <div class="col-start-1 text-white">
-                <div class="w-12 h-12 bg-gl rounded-full text-dark text-xl font-inter font-bold flex items-center justify-center">04</div>
-                <div class="text-4xl font-semibold pt-5">CVSHealth - Graduation in a box: Engaging future leaders with customized remote celebration kits</div>
-                <p class=" pt-5 text-xl"></p>
-            </div>
-            <div class="col-start-2">
-                <img src="/assets/CapstoneGradKit-36-BGE6L.jpg" class="col-start-2">
-            </div>
-        </a>
+                <div class="col-start-2 text-white">
+                    <div class="text-3xl font-semibold pt-2">Trumpf</div>
+                    <div class="text-3xl font-regular pt-2">Celebrating 100 years with style</div>
+                </div>
+               
+            </a>
+        </div>
+        <div class="grid grid-cols-2 pt-20">
+            <a class="pt-10 col-span-1 custom-grid" href="FedExHoodies.html">
+                <img src="/assets/FedExZPIT2-nIpjVvmx.png" class="rounded-lg h-[480px]">
+                <div class="col-start-1 text-white">
+                    <div class="text-3xl font-semibold pt-2">FedEx</div>
+                    <div class="text-3xl font-regular pt-2">A warm thanks for cold days</div>
+                </div>
+            <a class="pt-10 col-span-1 custom-grid" href="CVSKit.html">
+                <div class="col-start-2">
+                    <img src="/assets/CapstoneGradKit-NEanhYSO.jpg" class="rounded-lg h-[480px]">
+                </div>
+                <div class="col-start-2 text-white">
+                    <div class="text-3xl font-semibold pt-2">CVSHealth</div>
+                    <div class="text-3xl font-regular pt-2">Graduation in a box</div>
+                </div>
+                
+            </a>
+        </div>
     </div>
+
     <div id="footer"></div>
   </body>
 
@@ -90,5 +93,21 @@
         .then(response => response.text())
         .then(html => document.getElementById('background-images').innerHTML = html);
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const typedTextContainer = document.getElementById("typed-text");
+    const cursor = document.getElementById("cursor");
+    const text = "Our work";
+    let index = 0;
+
+    function typeOutText() {
+        if (index < text.length) {
+            typedTextContainer.insertBefore(document.createTextNode(text.charAt(index)), cursor);
+            index++;
+            setTimeout(typeOutText, 100); // Adjust typing speed if necessary
+        }
+    }
+    typeOutText();
+});
 
   </script>
