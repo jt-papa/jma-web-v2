@@ -21,7 +21,7 @@
     <div class="flex flex-col md:flex-row mx-28 pt-32">
       <!-- Categories column -->
       <div id="category-container" class="md:flex md:flex-col md:justify-between md:space-y-16 md:w-1/2 font-man">
-          <div class="category text-5xl text-whiteFade cursor-pointer s" id="promo">Merchandising</div>
+          <div class="category text-5xl text-whiteFade cursor-pointer" id="promo">Merchandising</div>
           <div class="category text-5xl text-whiteFade cursor-pointer" id="creative">Creative Hub</div>
           <div class="category text-5xl text-whiteFade cursor-pointer" id="digital">Digital Storefronts</div>
           <div class="category text-5xl text-whiteFade cursor-pointer" id="logistics">Logistics & Fulfillment</div>
@@ -194,7 +194,6 @@
 
 
     function selectCategory(categoryId) {
-    console.log('Category selected:', categoryId);
     const categories = document.querySelectorAll('.category');
     categories.forEach(cat => {
         cat.classList.remove('text-blue');
