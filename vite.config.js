@@ -7,6 +7,9 @@ import path from 'path';
 const production = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
+  // server: {
+  //   host: '192.168.1.129',
+  // },
   root: path.resolve(__dirname, 'src'),
   // base: process.env.NODE_ENV === 'production' ? '/jma-web-v2/' : '/',
   build: {
@@ -47,8 +50,5 @@ export default defineConfig({
         autoprefixer(),
       ],
     },
-  },
-  server: {
-    port: 3000,
   },
 });

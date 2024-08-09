@@ -37,6 +37,10 @@
     }
 }
 
+/* * {
+    border: 1px solid red;
+} */
+
 #typed-text {
     font-size: 120px;
     padding-right: 2px;
@@ -164,5 +168,16 @@ p {
   .wave-animation {
     animation: waveAnimation 2s infinite;
   }
+
+  @media (max-width: 800px) {
+
+    #typed-text {
+        font-size: 36px;
+        padding-right: 2px;
+        animation: blink 1s step-start infinite;
+        color: white;
+        white-space: pre-line;
+    }
+}
 
 
