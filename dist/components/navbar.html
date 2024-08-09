@@ -9,42 +9,116 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Interstate font from personal adobe account, change to JMA account -->
-    <link rel="stylesheet" crossorigin href="/assets/index-SG77gaTT.css">
+    <style>
+      #mobile-menu {
+        display: none; /* Hide the menu initially */
+      }
+
+      #mobile-menu.active {
+        display: block; /* Show menu when active class is added */
+      }
+    </style>
+    <link rel="stylesheet" crossorigin href="/assets/index-EBYboXA7.css">
   </head>
 
-    <body>
-        <nav id='navbar' class="fixed font-man top-0 w-full flex items-center justify-between bg-gray shadow-2xl py-6 px-28 transition-all duration-300 z-50">
-            <!-- Left-aligned items: Logo and Navigation Links -->
-            <div class="flex items-center space-x-16">
-                <!-- Company Logo -->
-                <a href="./../../index.html"><img src="/assets/jma_logo-Jw-0tIpM.png" class="h-12 max-w-lg z-50 translate-y-1"/></a>
-        
-                <!-- Navigation Links -->
-                <a href="./../pages/WhoWeAre.html" class="text-white">Who we are</a>
-                <a href="./../pages/WhatWeDo.html" class="text-white">What we do</a>
-                <a href="./../pages/OurProcess.html" class="text-white">Our process</a>
-                <a href="./../pages/OurWork.html" class="text-white">Our work</a>
-                <a href="https://www.jmaonlinestore.com/" target="_blank" rel="noopener noreferrer" class="text-white">Shop online</a>
+  <body>
+    <nav class="bg-dark fixed font-man w-full items-center z-50" id="navbar">
+      <div class="px-8">
+        <div class="flex h-24 items-center justify-between">
+          <!-- Mobile menu button-->
+          <button type="button" class="mobile-menu-button relative inline-flex items-center justify-center rounded-md text-white md:hidden">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+          <!-- Desktop  -->
+          <div class="flex-1 flex items-center">
+            <div class="ml-6 sm:flex md:space-x-8 xl:space-x-16 text-[14px] xl:text-[16px] items-center">
+              <div class="flex-1 flex md:justify-start justify-center items-center md:translate-y-1">
+                <a href="./../../index.html" class="block md:relative absolute top-8 md:top-0 inset-0 items-center">
+                  <img src="/assets/jma_logo-Jw-0tIpM.png" class="h-12 mx-auto md:mx-0"/>
+                </a>
+              </div>
+              <a href="./../pages/WhoWeAre.html" class="hidden text-white md:flex">Who we are</a>
+              <a href="./../pages/WhatWeDo.html" class="hidden text-white md:flex">What we do</a>
+              <a href="./../pages/OurProcess.html" class="hidden text-white md:flex">Our process</a>
+              <a href="./../pages/OurWork.html" class="hidden text-white md:flex">Our work</a>
+              <a href="https://www.jmaonlinestore.com/" target="_blank" rel="noopener noreferrer" class="hidden text-white md:flex">Shop online</a>
             </div>
-        
-            <!-- Right-aligned items: Contact Button and Social Media Icons -->
-            <div class="flex items-center space-x-8">
-                <!-- Contact Button -->
-                <a href="./../pages/Contact.html" class="outline outline-1 outline-white items-center bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-full transition-colors duration-300">
-                    Contact
-                </a>
-        
-                <!-- Social Media Icons -->
-                <a href="https://www.linkedin.com/company/john-michael-associates-inc/mycompany/" target="_blank" rel="noopener noreferrer" class="social-icon text-white text-3xl">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <!-- <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-icon text-white text-3xl">
-                    <i class="fab fa-facebook"></i>
-                </a> -->
-                <a href="https://www.instagram.com/jmalogos/" target="_blank" rel="noopener noreferrer" class="social-icon text-white text-3xl">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </nav>
-    </body>
+          </div>
+          <div class="flex items-center pl-2 space-x-6 md:space-x-8 xl:space-x-16 justify-end">
+            <a href="./../pages/Contact.html" class="text-[14px] xl:text-[16px] hidden md:flex outline outline-1 outline-white items-center text-white py-2 px-4 rounded-full transition-colors duration-300">Contact</a>
+            <a href="https://www.linkedin.com/company/john-michael-associates-inc/mycompany/" target="_blank" rel="noopener noreferrer" class="social-icon text-white text-3xl"><i class="fab fa-linkedin"></i></a> 
+            <a href="https://www.instagram.com/jmalogos/" target="_blank" rel="noopener noreferrer" class="social-icon text-white text-3xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="hidden" id="mobile-menu">
+        <div class="flex col space-y-1 px-2 pb-3 pt-2">
+          <a href="./../pages/WhoWeAre.html" class="text-white">Who we are</a>
+          <a href="./../pages/WhatWeDo.html" class="text-white">What we do</a>
+          <a href="./../pages/OurProcess.html" class="text-white">Our process</a>
+          <a href="./../pages/OurWork.html" class="text-white">Our work</a>
+          <a href="https://www.jmaonlinestore.com/" target="_blank" rel="noopener noreferrer" class="text-white">Shop online</a>
+        </div>
+      </div>
+    </nav>
+    <script>
+
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("show");
+        }
+
+// Close the dropdown menu if the user selects
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
+    //   document.addEventListener('DOMContentLoaded', function() {
+    //     const menuButton = document.querySelector('.mobile-menu-button');
+    //     const mobileMenu = document.getElementById('mobile-menu');
+    //     // const openIcon = menuButton.querySelector('svg:nth-child(1)'); // Open menu icon
+    //     // const closeIcon = menuButton.querySelector('svg:nth-child(2)'); // Close menu icon
+
+    //     // Toggle mobile menu visibility
+    //     function toggleMenu() {
+    //       mobileMenu.classList.toggle('active');
+    //       openIcon.classList.toggle('hidden');
+    //       closeIcon.classList.toggle('hidden');
+    //     }
+
+    //     // Add event listener for the menu button
+    //     menuButton.addEventListener('click', function(event) {
+    //       event.stopPropagation(); // Prevent click event from bubbling up
+    //       toggleMenu();
+    //     });
+
+    //     // Close the mobile menu if the user clicks outside of it
+    //     window.onclick = function(event) {
+    //       if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+    //         if (mobileMenu.classList.contains('active')) {
+    //           mobileMenu.classList.remove('active');
+    //           openIcon.classList.remove('hidden');
+    //           closeIcon.classList.add('hidden');
+    //         }
+    //       }
+    //     };
+    //   });
+    </script>
+  </body>
 </html>
