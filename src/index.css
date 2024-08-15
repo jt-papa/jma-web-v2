@@ -172,11 +172,26 @@ p {
   @media (max-width: 800px) {
 
     #typed-text {
-        font-size: 36px;
+        font-size: 48px;
         padding-right: 2px;
         animation: blink 1s step-start infinite;
         color: white;
         white-space: pre-line;
+    }
+
+    h1 {
+        font-family: 'Interstate';
+        font-weight: 'regular';
+        font-style: 'regular';
+        font-size: 36px;
+        text-decoration: none;
+    }
+
+    p {
+        font-family: 'manrope';
+        font-weight: 'regular';
+        font-style: 'regular';
+        font-size: 20px;
     }
 }
 
