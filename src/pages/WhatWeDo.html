@@ -482,7 +482,7 @@ window.onload = () => {
     }
 
     const contentId = 'content-' + categoryId;
-    console.log('contentId to show:', contentId);
+    // console.log('contentId to show:', contentId);
     const contents = document.querySelectorAll('.content-category');
     contents.forEach(content => {
         content.style.display = 'none'; // Hide other contents
@@ -498,10 +498,10 @@ window.onload = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const categories = document.querySelectorAll('#category-container .category');
-    console.log('Categories found:', categories.length);
+    // console.log('Categories found:', categories.length);
     categories.forEach(cat => {
         cat.addEventListener('click', function() {
-            console.log('Click on:', this.id);
+            // console.log('Click on:', this.id);
             const categoryId = this.id;
             selectCategory(categoryId);
         });

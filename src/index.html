@@ -622,7 +622,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM fully loaded and parsed')
+    // console.log('DOM fully loaded and parsed')
     document.getElementById('enter-site').addEventListener('click', function() {
       document.getElementById('landing-page').style.display = 'none';
     });
@@ -659,7 +659,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const contentId = 'content-' + categoryId;
-    console.log('contentId to show:', contentId); // Verify the correct contentId
+    // console.log('contentId to show:', contentId); // Verify the correct contentId
     const contents = document.querySelectorAll('.content-category');
     contents.forEach(content => {
         content.style.display = 'none';
@@ -675,10 +675,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const categories = document.querySelectorAll('#category-container .category');
-    console.log('Categories found:', categories.length); // Check the count of categories
+    // console.log('Categories found:', categories.length); // Check the count of categories
     categories.forEach(cat => {
         cat.addEventListener('click', function() {
-            console.log('Click on:', this.id); // Verify clicks are registered
+            // console.log('Click on:', this.id); // Verify clicks are registered
             const categoryId = this.id;
             selectCategory(categoryId);
         });
