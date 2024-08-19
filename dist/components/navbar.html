@@ -18,31 +18,32 @@
         display: block; /* Show menu when active class is added */
       }
     </style>
-    <link rel="stylesheet" crossorigin href="/assets/index-GfcB-JHM.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-whCj59Bf.css">
   </head>
 
   <body>
     <nav class="bg-dark fixed font-man w-full items-center z-50" id="navbar">
       <div class="px-8">
-        <div class="flex h-24 items-center justify-between">
+        <div class="navigation-menu flex h-24 items-center justify-between">
+          <div class="flex md:justify-start justify-center items-center md:translate-y-1">
+            <a href="./../../index.html" class="block md:relative absolute top-8 md:top-0 inset-0 items-center">
+              <img src="/assets/jma_logo-Jw-0tIpM.png" class="h-12 mx-auto md:mx-0"/>
+            </a>
+          </div>
           <!-- Mobile menu button-->
-          <button type="button" class="mobile-menu-button relative inline-flex items-center justify-center rounded-md text-white md:hidden">
+
+          <button type="button" class="mobile-menu-button items-center justify-end rounded-md text-white md:hidden ml-auto">
             <span class="sr-only">Open main menu</span>
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
             </svg>
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <svg class="hidden h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
           <!-- Desktop  -->
-          <div class="flex-1 flex items-center">
-            <div class="ml-6 sm:flex md:space-x-8 xl:space-x-16 text-[14px] xl:text-[16px] items-center">
-              <div class="flex-1 flex md:justify-start justify-center items-center md:translate-y-1">
-                <a href="./../../index.html" class="block md:relative absolute top-8 md:top-0 inset-0 items-center">
-                  <img src="/assets/jma_logo-Jw-0tIpM.png" class="h-12 mx-auto md:mx-0"/>
-                </a>
-              </div>
+          <div class="flex flex-col lg:flex lg:flex-row items-center lg:ml-10 lg:justify-start">
+            <div class="ml-6 hidden lg:flex justify-start md:space-x-8 xl:space-x-16 text-[16px] items-center">
               <a href="./../pages/WhoWeAre.html" class="hidden text-white md:flex">Who we are</a>
               <a href="./../pages/WhatWeDo.html" class="hidden text-white md:flex">What we do</a>
               <a href="./../pages/OurProcess.html" class="hidden text-white md:flex">Our process</a>
@@ -50,31 +51,50 @@
               <a href="https://www.jmaonlinestore.com/" target="_blank" rel="noopener noreferrer" class="hidden text-white md:flex">Shop online</a>
             </div>
           </div>
-          <div class="flex items-center pl-2 space-x-6 md:space-x-8 xl:space-x-16 justify-end">
-            <a href="./../pages/Contact.html" class="text-[14px] xl:text-[16px] hidden md:flex outline outline-1 outline-white items-center text-white py-2 px-4 rounded-full transition-colors duration-300">Contact</a>
+          <div class="hidden lg:flex lg:flex-row items-center pl-2 space-x-6 md:space-x-8 xl:space-x-16 lg:justify-end">
+            <a href="./../pages/Contact.html" class="text-[16px] hidden md:flex outline outline-1 outline-white items-center text-white py-2 px-4 rounded-full transition-colors duration-300">Contact</a>
             <a href="https://www.linkedin.com/company/john-michael-associates-inc/mycompany/" target="_blank" rel="noopener noreferrer" class="social-icon text-white text-3xl"><i class="fab fa-linkedin"></i></a> 
             <a href="https://www.instagram.com/jmalogos/" target="_blank" rel="noopener noreferrer" class="social-icon text-white text-3xl"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
       <!-- Mobile menu -->
-      <div class="hidden" id="mobile-menu">
+      <div class="hidden mobile-menu">
         <div class="flex col space-y-1 px-2 pb-3 pt-2">
           <a href="./../pages/WhoWeAre.html" class="text-white">Who we are</a>
           <a href="./../pages/WhatWeDo.html" class="text-white">What we do</a>
           <a href="./../pages/OurProcess.html" class="text-white">Our process</a>
           <a href="./../pages/OurWork.html" class="text-white">Our work</a>
           <a href="https://www.jmaonlinestore.com/" target="_blank" rel="noopener noreferrer" class="text-white">Shop online</a>
+          <a href="./../pages/Contact.html" class="text-white">Contact</a>
+          <a href="https://www.linkedin.com/company/john-michael-associates-inc/mycompany/" target="_blank" rel="noopener noreferrer" class="social-icon text-white"><i class="fab fa-linkedin"></i></a> 
+          <a href="https://www.instagram.com/jmalogos/" target="_blank" rel="noopener noreferrer" class="social-icon text-white"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </nav>
     <script>
 
+
+     document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) { // Check if both elements exist
+    mobileMenuButton.addEventListener('click', (event) => {
+      event.preventDefault(); // Stop any default action
+      mobileMenu.classList.toggle('hidden'); // Toggle visibility of the menu
+    });
+  } else {
+    console.error('Elements not found'); // Log an error if elements are not found
+  }
+});
+
+
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
-        function toggleMenu() {
-            document.getElementById("mobile-menu").classList.toggle("show");
-        }
+        // function toggleMenu() {
+        //     document.getElementById("mobile-menu").classList.toggle("show");
+        // }
 
 // Close the dropdown menu if the user selects
 // window.onclick = function(event) {

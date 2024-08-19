@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" crossorigin href="/assets/index-GfcB-JHM.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-whCj59Bf.css">
   </head>
   <body class="bg-dark">
     <div id="navbar"></div>
@@ -482,7 +482,7 @@ window.onload = () => {
     }
 
     const contentId = 'content-' + categoryId;
-    console.log('contentId to show:', contentId);
+    // console.log('contentId to show:', contentId);
     const contents = document.querySelectorAll('.content-category');
     contents.forEach(content => {
         content.style.display = 'none'; // Hide other contents
@@ -498,10 +498,10 @@ window.onload = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const categories = document.querySelectorAll('#category-container .category');
-    console.log('Categories found:', categories.length);
+    // console.log('Categories found:', categories.length);
     categories.forEach(cat => {
         cat.addEventListener('click', function() {
-            console.log('Click on:', this.id);
+            // console.log('Click on:', this.id);
             const categoryId = this.id;
             selectCategory(categoryId);
         });

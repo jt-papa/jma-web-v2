@@ -31,7 +31,7 @@
             </a>
           </div>
           <!-- Mobile menu button-->
-           
+
           <button type="button" class="mobile-menu-button items-center justify-end rounded-md text-white md:hidden ml-auto">
             <span class="sr-only">Open main menu</span>
             <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -75,17 +75,19 @@
     <script>
 
 
-      document.addEventListener('DOMContentLoaded', () => {
+     document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-        const mobileMenuButton = document.querySelector('.mobile-menu-button')
-        const mobileMenu = document.querySelector('.mobile-menu')
-  
-        mobileMenuButton.addEventListener('click', () => {
-        event.preventDefault();
-        mobileMenu.classList.toggle('hidden')
-        })
-
-      })
+  if (mobileMenuButton && mobileMenu) { // Check if both elements exist
+    mobileMenuButton.addEventListener('click', (event) => {
+      event.preventDefault(); // Stop any default action
+      mobileMenu.classList.toggle('hidden'); // Toggle visibility of the menu
+    });
+  } else {
+    console.error('Elements not found'); // Log an error if elements are not found
+  }
+});
 
 
         /* When the user clicks on the button,
