@@ -11,16 +11,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Interstate font from personal adobe account, change to JMA account -->
-    <link rel="stylesheet" crossorigin href="/assets/index-whCj59Bf.css">
+     <style>
+      @media screen and (max-width: 1024px) {
+    .burger {
+        display: block;
+        height: 32px;
+    }
+    .nav {
+        margin: 0;
+        position: absolute;
+        top: -500%; /* Start off-screen above */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+        transition: all 400ms;
+    }
+    .navlink {
+        text-align: left;
+        border-bottom: 1px solid; /* White borders around links */
+        padding: 10px; /* Padding for better touch area */
+        font-size: 18px; /* Larger font size */
+    }
+
+    .nav-active {
+        top: 80px;
+    }
+}
+     </style>
+    <link rel="stylesheet" crossorigin href="/assets/index-4yVXXqA1.css">
   </head>
   <body class="bg-dark">
-    <div id="navbar"></div>
+    <div id="navbar" class="hidden lg:flex"></div>
+    <div class="overlay"></div>
+
+    <header class="bg-dark z-50 w-full h-[80px] flex items-center justify-around fixed text-white lg:hidden">
+      <div class="flex justify-start items-center">
+          <a href="./../../index.html" class="block translate-y-1 absolute top-4 left-10 items-center">
+            <img src="./../assets/jma_logo.png" class="h-12 mx-auto md:mx-0"/>
+          </a>
+        </div>
+      <ul class="nav bg-dark">
+          <li class="navlink"><a href="index.html">Home</a></li>
+          <li class="navlink"><a href="pages/WhoWeAre.html">Who we are</a></li>
+          <li class="navlink"><a href="pages/WhatWeDo.html">What we do</a></li>
+          <li class="navlink"><a href="pages/OurProcess.html">Our process</a></li>
+          <li class="navlink"><a href="pages/OurWork.html">Our work</a></li>
+          <li class="navlink"><a href="https://www.jmaonlinestore.com/" target="_blank" rel="noopener noreferrer">Shop online</a></li>
+          <li class="navlink"><a href="pages/Contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">
+          <i class="fas fa-bars text-2xl"></i>
+      </div>
+  </header>
    
-    <!-- Landing Screen-->
-    <!-- <div id="landing-page" class="fixed inset-0 flex flex-col items-center justify-center bg-dark z-50">
-        <img src="assets/jma_logo.png" alt="Company Logo" id="company-logo" class="max-w-1/8 h-60 opacity-0" style="animation: fadeIn 3s forwards;">
-        <button id="enter-site" class="mt-20 px-6 py-3 font-inter font-semibold text-xl cursor-pointer text-dark bg-gl rounded-full">ENTER SITE</button>
-    </div> -->
     <main>
         <div id="background-images"></div>
         <!-- Hero section -->
@@ -602,6 +647,40 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error loading the navbar:', error));
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     fetch('components/navbarMobile.html')
+//         .then(response => response.text())
+//         .then(html => document.getElementById('navbar-mobile').innerHTML = html)
+//         .catch(error => console.error('Error loading the navbar:', error));
+// });
+
+
+// MOBILENAVIGATION -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const burger = document.querySelector('.burger i');
+const nav = document.querySelector('.nav');
+const overlay = document.querySelector('.overlay');
+
+// Defining a function
+function toggleNav() {
+    burger.classList.toggle('fa-bars');
+    burger.classList.toggle('fa-times');
+    nav.classList.toggle('nav-active');
+    overlay.style.display = nav.classList.contains('nav-active') ? 'block' : 'none';
+}
+
+// Calling the function after click event occurs
+burger.addEventListener('click', function() {
+    toggleNav();
+});     
+
+// Close the nav when clicking on the overlay
+overlay.addEventListener('click', function() {
+    toggleNav();
+});
+
+// MOBILENAVIGATION -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('components/footer.html')
         .then(response => response.text())
@@ -620,13 +699,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.text())
         .then(html => document.getElementById('background-images').innerHTML = html);
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-    // console.log('DOM fully loaded and parsed')
-    document.getElementById('enter-site').addEventListener('click', function() {
-      document.getElementById('landing-page').style.display = 'none';
-    });
-  });
 
 //   document.getElementById('start-project').addEventListener('click', function() {
 //             window.location.href = 'pages/Contact.html'; // Destination URL

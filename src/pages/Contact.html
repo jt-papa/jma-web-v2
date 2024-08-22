@@ -43,10 +43,57 @@
             font-size: 1.2em;
             margin-top: 1em;
         }
+        @media screen and (max-width: 1024px) {
+    .burger {
+        display: block;
+        height: 32px;
+    }
+    .nav {
+        margin: 0;
+        position: absolute;
+        top: -500%; /* Start off-screen above */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+        transition: all 400ms;
+    }
+    .navlink {
+        text-align: left;
+        border-bottom: 1px solid; /* White borders around links */
+        padding: 10px; /* Padding for better touch area */
+        font-size: 18px; /* Larger font size */
+    }
+
+    .nav-active {
+        top: 80px;
+    }
+}
     </style>
 </head>
 <body class="bg-dark">
     <div id="navbar"></div>
+    <div class="overlay"></div>
+    <header class="bg-dark z-50 w-full h-[80px] flex items-center justify-around fixed text-white lg:hidden">
+      <div class="flex justify-start items-center">
+          <a href="./../../index.html" class="block translate-y-1 absolute top-4 left-10 items-center">
+            <img src="./../assets/jma_logo.png" class="h-12 mx-auto md:mx-0"/>
+          </a>
+        </div>
+      <ul class="nav bg-dark">
+          <li class="navlink"><a href="./../index.html">Home</a></li>
+          <li class="navlink"><a href="WhoWeAre.html">Who we are</a></li>
+          <li class="navlink"><a href="WhatWeDo.html">What we do</a></li>
+          <li class="navlink"><a href="OurProcess.html">Our process</a></li>
+          <li class="navlink"><a href="OurWork.html">Our work</a></li>
+          <li class="navlink"><a href="https://www.jmaonlinestore.com/" target="_blank" rel="noopener noreferrer">Shop online</a></li>
+          <li class="navlink"><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">
+          <i class="fas fa-bars text-2xl"></i>
+      </div>
+  </header>
     <div id="background-images"></div>
 
     <!-- FORM -->
@@ -108,6 +155,32 @@
     <div id="footer" class="-mt-40 lg:-mt-0"></div>
 
     <script>
+
+    // MOBILENAVIGATION -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const burger = document.querySelector('.burger i');
+const nav = document.querySelector('.nav');
+const overlay = document.querySelector('.overlay');
+
+// Defining a function
+function toggleNav() {
+    burger.classList.toggle('fa-bars');
+    burger.classList.toggle('fa-times');
+    nav.classList.toggle('nav-active');
+    overlay.style.display = nav.classList.contains('nav-active') ? 'block' : 'none';
+}
+
+// Calling the function after click event occurs
+burger.addEventListener('click', function() {
+    toggleNav();
+});     
+
+// Close the nav when clicking on the overlay
+overlay.addEventListener('click', function() {
+    toggleNav();
+});
+
+// MOBILENAVIGATION -----------------------------------------------------------------
+
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.getElementById('contactForm');
         const submitButton = document.getElementById('submitButton');

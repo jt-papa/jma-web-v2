@@ -154,6 +154,20 @@ p {
     object-fit: cover; /* Ensures the image covers the area properly */
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.774); /* Semi-transparent black */
+    z-index: 49; /* Below the header z-index */
+    display: none; /* Hidden by default */
+}
+
+.nav-active + .overlay {
+    display: block; /* Show overlay when nav is active */
+}
 
 
 

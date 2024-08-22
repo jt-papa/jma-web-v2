@@ -5,6 +5,7 @@ export default {
     "src/index.html",
     "./src/**/*.{js,html}",
     "src/components/navbar.html",
+    "src/components/navbarMobile.html",
     "src/components/footer.html",
     "src/components/infographic.html",
     "src/pages/WhoWeAre.html",
@@ -66,6 +67,8 @@ export default {
         },
       },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 }
