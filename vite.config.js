@@ -34,6 +34,7 @@ export default defineConfig({
         projectButton: resolve(__dirname, 'src/components/projectButton.html'),
         services: resolve(__dirname, 'src/components/services.html'),
         stats: resolve(__dirname, 'src/components/stats.html'),
+        OdpCatelog: resolve(__dirname, 'src/odpcatelog/index.html'),
  
       }
     }

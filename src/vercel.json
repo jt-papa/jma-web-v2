@@ -1,0 +1,14 @@
+{
+    "rewrites": [
+      { "source": "/home", "destination": "index.html" },
+      { "source": "/WhoWeAre", "destination": "/pages/WhoWeAre.html" },
+      { "source": "/WhatWeDo", "destination": "/pages/WhatWeDo.html" },
+      { "source": "/OurProcess", "destination": "/pages/OurProcess.html" },
+      { "source": "/OurWork", "destination": "/pages/OurWork.html" },
+      { "source": "/Contact", "destination": "/pages/Contact.html" },
+      { "source": "/aetna-case-study", "destination": "/pages/LightCubes.html" },
+      { "source": "/trumpf-case-study", "destination": "/pages/TrumpfMaple.html" },
+      { "source": "/fedex-case-study", "destination": "/pages/FedExHoodies.html" },
+      { "source": "/cvs-case-study", "destination": "/pages/CVSKit.html" }
+    ]
+  }
